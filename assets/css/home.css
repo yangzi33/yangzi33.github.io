@@ -1,8 +1,9 @@
 
 body {
+  font-size: 150%;
 }
 .main {
-  max-width: 540px;
+  max-width: 570px;
   margin: 70px;
 }
 h1 {
@@ -11,15 +12,15 @@ h1 {
 
 .photo {
   float: right;
-  width: 180px;
-  margin-right: -220px;
+  width: 220px;
+  margin-right: -280px;
   border-radius: 2px;
 }
 A {
 
    TEXT-DECORATION:NONE;
     COLOR:   	 #007bb6;
-} 
+}
 A:visited {
    TEXT-DECORATION: NONE
     COLOR: 	 #007bb6;
