@@ -3,7 +3,7 @@ body {
   font-size: 150%;
 }
 .main {
-  max-width: 670px;
+  max-width: 650px;
   margin: 80px;
 }
 h1 {
@@ -13,7 +13,7 @@ h1 {
 .photo {
   float: right;
   width: 220px;
-  margin-right: -280px;
+  margin-right: -260px;
   border-radius: 2px;
 }
 A {
