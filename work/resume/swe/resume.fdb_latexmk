@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1592095054 "/home/yangzi33/Dropbox/work/resume/swe/resume.tex" "/home/yangzi33/Dropbox/work/resume/swe/resume.pdf" "resume" 1592095054
+["pdflatex"] 1592603644 "/home/yangzi33/github/yangzi33.github.io/work/resume/swe/resume.tex" "/home/yangzi33/github/yangzi33.github.io/work/resume/swe/resume.pdf" "resume" 1592603644
   "/etc/texmf/web2c/texmf.cnf" 1590956154 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/yangzi33/Dropbox/work/resume/swe/resume.aux" 1592095054 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "/home/yangzi33/Dropbox/work/resume/swe/resume.tex" 1592095053 6319 9f5f816836a164969ee250b81f761473 ""
+  "/home/yangzi33/github/yangzi33.github.io/work/resume/swe/resume.aux" 1592603644 662 b2b94621371df8d9296b8bf5bec1b851 ""
+  "/home/yangzi33/github/yangzi33.github.io/work/resume/swe/resume.tex" 1592603643 6312 d0ab69d5e52e8f22fc9d69d54286fffa ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1136768653 1300 63a6111ee6274895728663cf4b4e7e81 ""
@@ -54,13 +54,13 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1591999594 4770672 b8a0dcd2f0f191bc8e98ea7cdac3e255 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1591999619 8255896 0b7cf463a32e8817c0b6c57477fd3094 ""
-  "resume.aux" 1592095054 662 b2b94621371df8d9296b8bf5bec1b851 "pdflatex"
-  "resume.out" 1592095054 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "resume.tex" 1592095053 6319 9f5f816836a164969ee250b81f761473 ""
+  "resume.aux" 1592603644 662 b2b94621371df8d9296b8bf5bec1b851 "pdflatex"
+  "resume.out" 1592603644 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "resume.tex" 1592603643 6312 d0ab69d5e52e8f22fc9d69d54286fffa ""
   (generated)
-  "resume.out"
-  "/home/yangzi33/Dropbox/work/resume/swe/resume.pdf"
   "resume.log"
+  "/home/yangzi33/github/yangzi33.github.io/work/resume/swe/resume.log"
+  "/home/yangzi33/github/yangzi33.github.io/work/resume/swe/resume.pdf"
   "resume.aux"
   "resume.pdf"
-  "/home/yangzi33/Dropbox/work/resume/swe/resume.log"
+  "resume.out"
