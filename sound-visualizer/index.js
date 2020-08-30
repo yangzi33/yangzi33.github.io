@@ -60,7 +60,7 @@ window.onload = function () {
                 var rms = Math.sqrt(total / bufferLength);
                 h.innerHTML = "Speak";
             } else {
-                h.innerHTML = "";
+                h.innerHTML = "Stopped";
                 hSub.innerHTML = "";
             }
         }
