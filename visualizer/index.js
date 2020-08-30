@@ -58,9 +58,7 @@ window.onload = function () {
                    total += x * x;
                 }
                 var rms = Math.sqrt(total / bufferLength);
-                var db = 20 * ( Math.log(rms) / Math.log(10) );
-                db = Math.max(db, 0); // sanity check
-                h.innerHTML = Math.floor(db) + " dB";
+                h.innerHTML = "Speak";
             } else {
                 h.innerHTML = "";
                 hSub.innerHTML = "";
@@ -72,7 +70,7 @@ window.onload = function () {
     }
 
     var soundNotAllowed = function (error) {
-        h.innerHTML = "You must allow your microphone.";
+        h.innerHTML = "Microphone permission is required.";
         console.log(error);
     }
 
@@ -93,7 +91,7 @@ window.onload = function () {
                 audioContent = new AudioContext();
             }
             start = true;
-            this.innerHTML = "<span class='fa fa-stop'></span>Stop Listen";
+            this.innerHTML = "<span class='fa fa-stop'></span>Stop";
             this.className = "stop-button";
         }
     };

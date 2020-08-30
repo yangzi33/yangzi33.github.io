@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color:#222;
+    background-color:black;
 }
 svg {
     display: block;
@@ -56,16 +56,10 @@ button span {
     float: left;
 }
 .start-button {
-    background-color: green;
-}
-.start-button:hover {
-    background-color: green;
+    background-color: #83A3FF;
 }
 .stop-button {
-    background-color: #db6247;
-}
-.stop-button:hover {
-    background-color: #cc5338;
+    background-color: #F85A47;
 }
 path {
     stroke-linecap: square;
