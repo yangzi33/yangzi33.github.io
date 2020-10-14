@@ -1,9 +1,9 @@
-
 body {
+  font-size: 150%;
 }
 .main {
-  max-width: 540px;
-  margin: 70px;
+  max-width: 650px;
+  margin: 50px;
 }
 h1 {
   font-size: 170%;
@@ -18,11 +18,11 @@ h1 {
 A {
 
    TEXT-DECORATION:NONE;
-    COLOR:   	 #007bb6;
+    COLOR:     #007bb6;
 }
 A:visited {
    TEXT-DECORATION: NONE
-    COLOR: 	 #007bb6;
+    COLOR:   #007bb6;
 }
 A:active {
    TEXT-DECORATION: NONE
