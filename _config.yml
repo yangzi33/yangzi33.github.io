@@ -7,9 +7,9 @@ baseurl:     ""
 url:         "https://yangzi33.github.io"
 date_format: "%b %-d, %Y"
 header_pages:
- - bookshelf.md
+ - resume.md
  - blog/index.html
- - misc.md
+ - miscellaneous.md
 
 # Google services
 google_verification:

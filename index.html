@@ -35,16 +35,19 @@ $(document).ready(function(){
 <tr>
   <article class="post-content">
 
-  <td valign="middle" width="35%">
-      <img src="{{ site.baseurl }}/data/thonk.png" alt="Ziyue Yang"
+  <td valign="left" width="35%">
+      <img src="{{ site.baseurl }}/data/profile.png" alt="Ziyue Yang"
         style="
           width: 10rem;
           border-radius: 10%;
+          margin-left: 5px;
         "/>
 
     <header class="post-header">
-      <h1 style="font-size: 1.8rem; margin-top: 0; margin-bottom: 0; margin-left: 13px;">
+      <h1 style="font-size: 1.8rem; margin-top: 0; margin-bottom: 0; margin-left: 15px;">
                   Ziyue Yang</h1>
+    </header>
+
     </header>
 
     <header class="site-header px2 px-responsive">
@@ -61,13 +64,13 @@ $(document).ready(function(){
 
   <td valign="top" width="65%">
     <p>
-    I'm a third-year undergraduate student pursuing a degree in 
-    Computer Science, Statistics, and Mathematics. My academic interests intersect data science, applied machine
-    learning methods, and computer vision. I'm involved in the LearnAI program at UofTAI.
+    I'm a third-year undergraduate student at the <b>University of Toronto</b>, pursuing a degree in 
+    Computer Science, Statistics, and Mathematics. My academic interests intersect data science and applied machine
+    learning methods. I'm involved in the LearnAI program at UofTAI.
         <br><br>
-    Previously, I interned as an iOS developer at Cohesion, where I majorly worked with Swift and React Native. I also led a group at Bigtheta, demonstrated software design principles and built Django-based apps.
+    Previously, I interned as an iOS developer at <i>Cohesion</i>, where I majorly worked with Swift and React Native. I also led a group at <i>Bigtheta</i>, demonstrated software design principles and built Django-based apps.
     <br><br>
-    I constantly seek for opportunities where I can make positive impacts and gain valuable experience from the industry, while maintaining a healthy work-life balance.
+    I constantly seek for software engineering opportunities. I look forward to making positive impacts and gaining valuable experience from the industry, while maintaining a healthy work-life balance. I occationally contribute to open-source projects such as <a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a>.
     
     <!-- I watch Formula One racing and play some chess in my spare time. -->
 
@@ -115,11 +118,12 @@ $(document).ready(function(){
   <td valign="top" width="75%">
 
     <h3>House Prices Prediction with Gradient Boost Classifier</h3>
-    <p>
+<!--     <p>
       Description
     </p>
     <p> <strong>Ziyue Yang</strong>
     </p>
+ -->    
     <p>
         <a href="https://www.kaggle.com/yangzi33/housepriceprediction/">Notebook</a>
     </p>
@@ -128,98 +132,65 @@ $(document).ready(function(){
 
 <tr>
   <td valign="middle" width="25%">
-    <a href="https://github.com/UTMIST/ICLR-2019-Challenge">
-      <img src="{{ site.base_url }}/images/projects/iclr2019/iclr2019.jpg">
-    </a>
+      <img src="{{ site.base_url }}/data/projects/agenda.png">
   </td>
   <td valign="top" width="75%">
 
     <h3>Agenda</h3>
     <p>
-        We implemented the ICLR 2019 submission (later accepted)
-        "<a href="https://openreview.net/forum?id=B1GMDsR5tm">Initialized Equilibrium Propagation for Backprop-Free Training</a>"
-        by O'Connor et al. as part of the
-        <a href="https://reproducibility-challenge.github.io/iclr_2019/">
-        ICLR 2019 Reproducibility Challenge</a>.
+      Android calendar app.
     </p>
     <p>
-        <sup>†</sup><a href="https://github.com/mchanchee">Matthieu Chan Chee</a>,
-        <a href="https://gitlab.com/tekne">Jad Ghalayini</a>,
-        <strong>Jacob Kelly</strong>,
-        <a href="https://winniexu.ca/">Winnie Xu</a>
-    </p>
-    <p>
-        <a href="https://github.com/UTMIST/ICLR-2019-Challenge">code</a>
+        <a href="https://github.com/yangzi33/agenda">code</a>
     </p>
   </td>
 </tr>
 
-<tr>
-  <td valign="middle" width="25%">
-    <a href="https://github.com/jacobjinkelly/deepsort">
-      <img src="{{ site.base_url }}/images/projects/deepsort/deepsort.png">
-    </a>
-  </td>
-  <td valign="top" width="75%">
-
-    <h3>MNIST Classifier</h3>
-    <p>
-        From scratch, I implemented MNIST classifier with numpy only.
-    </p>
-    <p> <strong>Jacob Kelly</strong>
-    </p>
-    <p>
-        <a href="{{ site.baseurl }}/2018/06/20/sorting-numbers-with-a-neural-network/">blog</a> |
-        <a href="https://github.com/jacobjinkelly/deepsort">code</a>
-    </p>
-  </td>
-</tr>
 
 <tr>
-  <td valign="middle" width="25%">
-    <a href="https://github.com/brunofalmeida/PocketGuide-Android">
-      <img src="{{ site.baseurl }}/images/projects/pocketguide/pocketguide.png">
-    </a>
+  <td valign="middle" width="15%">
+      <img src="{{ site.baseurl }}/data/projects/fpv.png">
   </td>
   <td valign="top" width="75%">
 
     <h3>FPV Navigator</h3>
     <p>
-        We developed an Android app for indoor navigation through
-        <a href="https://www.sickkids.ca/">SickKids</a>
-        hospital using bluetooth signals from
-        <a href="https://estimote.com/">Estimote Beacons</a>. We use
-        <a href="https://en.wikipedia.org/wiki/Shortest_Path_Faster_Algorithm">SPFA</a>
-        on a map of beacon locations to efficiently generate the shortest path
-        from the user's current location to their destination. We estimate
-        the current location using signal strengths from nearby beacons
-        and track over time using an exponentially weighted average.
-        Developed in summer 2016 at <a href="https://www.cossette.com/">Cossette</a>.
-    </p>
-    <p> <sup>†</sup><a href="http://brunoalmeida.ca/">Bruno Almeida</a>,
-        <strong>Jacob Kelly</strong>,
-        <a href="https://github.com/gabrielcyeung">Gabriel Yeung</a>
+     Console based first person view navigator. 
     </p>
     <p>
-        <a href="{{ site.baseurl }}/images/projects/pocketguide/pocketguide_slides.pdf">slides</a> |
-        <a href="https://github.com/brunofalmeida/PocketGuide-Android">code</a>
+        <a href="https://github.com/yangzi33/ConsoleFPV">code</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="15%">
+      <img src="{{ site.baseurl }}/data/projects/treemap.png">
+  </td>
+  <td valign="top" width="85%">
+
+    <h3>Treemap</h3>
+    <p><a href="https://github.com/yangzi33/Treemap-Visualizer/">code</a></p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+      <!-- <img src="{{ site.base_url }}/data/projects/mnist"> -->
+  </td>
+  <td valign="top" width="75%">
+
+    <h3><sup>†</sup>MNIST Classifier</h3>
+    <p>
+      <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> classifier implemented from scratch with numpy only.
+    </p>
     </p>
   </td>
 </tr>
 
 </table>
 
-<p><sup>†</sup>alphabetical order</p>
-
-<div id="Teaching" class="post">
-    <article class="post-content">
-        <header class="post-header">
-          <h1 style="font-size: 2rem; margin-top: 0; margin-bottom: 0">ff</h1>
-        </header>
-    </article>
-</div>
-
-<p>I have been a Teaching Assistant for the following:</p>
-<ul>
-  <li><a href="https://probmlcourse.github.io/sta414/">STA414/2104: Statistical Methods for Machine Learning II</a> (Winter 2020)</li>
-</ul>
+<p>
+  <sup>†</sup>: ongoing<br>
+  <a href="{{ site.baseurl }}/resume">More project details here.</a>
+</p>
