@@ -1,126 +1,196 @@
-<html>
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125439105-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            
-            gtag('config', 'UA-125439105-1');
-            
-        </script>
-        <title>Ziyue Yang</title>
-        <link href="assets\css\bootstrap.min.css" rel="stylesheet">
-        <link href="assets\css\home.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="main">
-        <img src="data/profile2.jpg"   class="photo">
-        <h2>Ziyue Yang</h2>
-        <br>
-        <p>I am a third-year undergraduate student at the University of Toronto,
-            pursuing a degree in Statistics, Computer Science, and Mathematics.
-        </p>
-        <p>I am seeking opportunities where I can gain valuable industrial
-            experience, where my work will make a positive impact, and where I can
-            maintain a healthy work-life balance.
-        </p>
-        Email: ziyue.yang [at] mail.utoronto.ca<br>
-        [<a href="https://www.linkedin.com/in/ziyue-yang-5991b7175/">Linkedin</a>]
-        [<a href="resume.pdf">Résumé</a>]
-        [<a href="https://www.github.com/yangzi33">GitHub</a>]
+---
+layout: default
+---
 
-        <h1><a name="pubs"></a>Experience</h1>
-        <ul><b>Bigtheta</b><br>
-            Project Lead <br>
-            <i>May 2020 - June 2020</i><br>
-        </ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
-        <ul><b>Cohesion</b><br>
-            iOS Developer, Internship<br>
-            <i>August 2018</i><br>
-        </ul>
-        
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-        <h1><a name="pubs"></a>Projects</h1>
+      // Store hash
+      var hash = this.hash;
 
-        <ul><b>*UniMart</b><br>
-            Online C2C marketplace.<br>
-            [<a href="https://github.com/yangzi33/unimart">code</a>]
-        </ul>
-        
-        <ul><b>Agenda</b><br>
-            Android calendar app.<br>
-            [<a href="https://github.com/yangzi33/agenda">code</a>]
-        </ul>
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
 
-        <ul><b>Navigator</b><br>
-            First-person navigator using the <br>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/e/e7/Simple_raycasting_with_fisheye_correction.gif">ray casting algorithm</a>.<br>
-            [<a href="https://www.github.com/yangzi33/ConsoleFPV">code</a>]
-        </ul>
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 
-        <ul><b>*Deep Neural Nets for Neck Tumor Segmentation</b><br>
-            [<a href="https://github.com/yangzi33/tumorNN">code</a>]
-        </ul>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
-        <ul><b>Cohesion</b><br>
-            Office reservation tool for <a href="https://cohesionwork.com"><i>Cohesion</i></a>,
-            a company that <br>provides shared workspace for other enterprises.<br>
-            [<a href="https://apps.apple.com/cn/app/cohesion%E7%9B%AE%E6%9E%97/id1382553643">App Store</a>]
-        </ul>
+<tr>
+  <article class="post-content">
 
-        <ul><b>Sound Visualizer</b><br>
-            [<a href="https://yangzi33.github.io/sound-visualizer">demo</a>]
-        </ul>
+  <td valign="left" width="35%">
+      <img src="{{ site.baseurl }}/data/profile.png" alt="Ziyue Yang"
+        style="
+          width: 10rem;
+          border-radius: 10%;
+          margin-left: 5px;
+        "/>
 
-        <ul><b>Todo</b><br>
-            Django app for Bigtheta's project introduction.<br>
-            [<a href="https://github.com/yangzi33/django-todo">code</a>]
-        </ul>
-        
-        <i>*: Ongoing projects</i><br>
+    <header class="post-header">
+      <h1 style="font-size: 1.8rem; margin-top: 0; margin-bottom: 0; margin-left: 15px;">
+                  Ziyue Yang</h1>
+    </header>
 
-        <h1><a name="skills"></a>Technical Skills</h1>
-        <ul>
-            <li>
-                Programming
-                <ul>
-                    <li>I majorly work with <b>Python, C++, and Java</b>.
-                    <li>My work at Cohesion is mostly
-                        Swift and JavaScript programming.
-                    <li>I have also played with some other languages like Haskell, Golang,
-                        and Ruby.
-                </ul>
-            <li>
-                Web Development
-                <ul>
-                    <li>I am familiar with the <b>Django</b> and <b>React</b>; I also have some but limited knowledge on Rails.
-                    <li>I have worked with <b>SQLite</b> and some PostgreSQL.
-                </ul>
-            <li>
-                Machine Learning
-                <ul>
-                    <li>Making progress on building image recognition models using CNN, which will be
-                        trained on the HECKTOR datasets provided by <a href="https://www.miccai2020.org/"><i>MICCAI 2020</i></a>.
-                    <li>I have worked with various libraries including PyTorch and Keras.
-                </ul>
-            <li>I have experience developing mobile apps on Xcode and Android Studio.
-            <li>I am familiar with UNIX programming. I run both Linux and macOS at home.
-        </ul>
-        <!--- <h1><a name="curricula"></a>Selected Curricula</h1>
-            <ul>
-                <li>Computer Science: Data Structures, Convolutional
-            Neural Networks, Theory of Computation, Systems Programming.
-            <li>Statistics: Methods for Machine Learning, Methods of Data Analysis, Probability.
-            <li>Mathemtics: Linear Algebra, Real Analysis, Multivariable Calculus. </ul>
-            -->
+    </header>
 
-        <h1><a name="other"></a>Miscellaneous</h1>
-        <ul>
-            <li><u><a href="https://www.name-coach.com/ziyue-yang-6de7fde3-3026-4cd1-acfa-5b7c30cc036e?share_trigger=true">How to pronounce my name</a></u>: similar to "zee", "you" in English.
-            <li><a href="https://kaggle.com/yangzi33">My Kaggle</a>.
-            <li>Fan of <a href="https://www.formula1.com/">Formula One Racing</a>.
-        </ul>
-</html>
+    <header class="site-header px2 px-responsive">
+      <div class="wrap">
+        <div class="measure">
+          <div class="clearfix"></div>
+          {% if site.show_social_icons %}
+            {% include social_links.html %}
+          {% endif %}
+        </div>
+      </div>
+    </header>
+  </td>
+
+  <td valign="top" width="65%">
+    <p>
+    I'm a third-year undergraduate student at the <b>University of Toronto</b>, pursuing a degree in 
+    Computer Science, Statistics, and Mathematics. My academic interests intersect data science and applied machine
+    learning methods. I'm involved in the LearnAI program at UofTAI.
+        <br><br>
+    Previously, I interned as an iOS developer at <i>Cohesion</i>, where I majorly worked with Swift and React Native. I also led a group at <i>Bigtheta</i>, demonstrated software design principles and built Django-based apps.
+    <br><br>
+    I constantly seek for software engineering opportunities. I look forward to making positive impacts and gaining valuable experience from the industry, while maintaining a healthy work-life balance. I occationally contribute to open-source projects such as <a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a>.
+    
+    <!-- I watch Formula One racing and play some chess in my spare time. -->
+
+    </p>
+  </td>
+
+  </article>
+</tr>
+
+</table>
+
+<br><br>
+
+
+<div id="Projects" class="post">
+    <article class="post-content">
+        <header class="post-header">
+          <h1 style="font-size: 2rem; margin-top: 0; margin-bottom: 0">Projects</h1>
+        </header>
+    </article>
+</div>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+<tr>
+  <td valign="middle" width="25%">
+      <img src="{{ site.base_url }}/data/projects/rest-transparent.png">
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>UniMart</h3>
+    <p>
+      <!-- Full-stack application  -->
+    </p>
+    <p>
+        <a href="https://github.com/yangzi33/unimart/">code</a> | demo
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+      <img src="{{ site.base_url }}/data/projects/pca.png">
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>House Prices Prediction with Gradient Boost Classifier</h3>
+<!--     <p>
+      Description
+    </p>
+    <p> <strong>Ziyue Yang</strong>
+    </p>
+ -->    
+    <p>
+        <a href="https://www.kaggle.com/yangzi33/housepriceprediction/">Notebook</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+      <img src="{{ site.base_url }}/data/projects/agenda.png">
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>Agenda</h3>
+    <p>
+      Android calendar app.
+    </p>
+    <p>
+        <a href="https://github.com/yangzi33/agenda">code</a>
+    </p>
+  </td>
+</tr>
+
+
+<tr>
+  <td valign="middle" width="15%">
+      <img src="{{ site.baseurl }}/data/projects/fpv.png">
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>FPV Navigator</h3>
+    <p>
+     Console based first person view navigator. 
+    </p>
+    <p>
+        <a href="https://github.com/yangzi33/ConsoleFPV">code</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="15%">
+      <img src="{{ site.baseurl }}/data/projects/treemap.png">
+  </td>
+  <td valign="top" width="85%">
+
+    <h3>Treemap</h3>
+    <p><a href="https://github.com/yangzi33/Treemap-Visualizer/">code</a></p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+      <!-- <img src="{{ site.base_url }}/data/projects/mnist"> -->
+  </td>
+  <td valign="top" width="75%">
+
+    <h3><sup>†</sup>MNIST Classifier</h3>
+    <p>
+      <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> classifier implemented from scratch with numpy only.
+    </p>
+    </p>
+  </td>
+</tr>
+
+</table>
+
+<p>
+  <sup>†</sup>: ongoing<br>
+  <a href="{{ site.baseurl }}/resume">More project details here.</a>
+</p>
