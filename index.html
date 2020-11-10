@@ -1,126 +1,237 @@
-<html>
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125439105-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            
-            gtag('config', 'UA-125439105-1');
-            
-        </script>
-        <title>Ziyue Yang</title>
-        <link href="assets\css\bootstrap.min.css" rel="stylesheet">
-        <link href="assets\css\home.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="main">
-        <img src="data/profile2.jpg"   class="photo">
-        <h2>Ziyue Yang</h2>
-        <br>
-        <p>I am a third-year undergraduate student at the University of Toronto,
-            pursuing a degree in Statistics, Computer Science, and Mathematics.
-        </p>
-        <p>I am seeking opportunities where I can gain valuable industrial
-            experience, where my work will make a positive impact, and where I can
-            maintain a healthy work-life balance.
-        </p>
-        Email: ziyue.yang [at] mail.utoronto.ca<br>
-        [<a href="https://www.linkedin.com/in/ziyue-yang-5991b7175/">Linkedin</a>]
-        [<a href="resume.pdf">Résumé</a>]
-        [<a href="https://www.github.com/yangzi33">GitHub</a>]
+---
+layout: default
+---
 
-        <h1><a name="pubs"></a>Experience</h1>
-        <ul><b>Bigtheta</b><br>
-            Project Lead <br>
-            <i>May 2020 - June 2020</i><br>
-        </ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
-        <ul><b>Cohesion</b><br>
-            iOS Developer, Internship<br>
-            <i>August 2018</i><br>
-        </ul>
-        
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-        <h1><a name="pubs"></a>Projects</h1>
+      // Store hash
+      var hash = this.hash;
 
-        <ul><b>*UniMart</b><br>
-            Online C2C marketplace.<br>
-            [<a href="https://github.com/yangzi33/unimart">code</a>]
-        </ul>
-        
-        <ul><b>Agenda</b><br>
-            Android calendar app.<br>
-            [<a href="https://github.com/yangzi33/agenda">code</a>]
-        </ul>
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
 
-        <ul><b>Navigator</b><br>
-            First-person navigator using the <br>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/e/e7/Simple_raycasting_with_fisheye_correction.gif">ray casting algorithm</a>.<br>
-            [<a href="https://www.github.com/yangzi33/ConsoleFPV">code</a>]
-        </ul>
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 
-        <ul><b>*Deep Neural Nets for Neck Tumor Segmentation</b><br>
-            [<a href="https://github.com/yangzi33/tumorNN">code</a>]
-        </ul>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
-        <ul><b>Cohesion</b><br>
-            Office reservation tool for <a href="https://cohesionwork.com"><i>Cohesion</i></a>,
-            a company that <br>provides shared workspace for other enterprises.<br>
-            [<a href="https://apps.apple.com/cn/app/cohesion%E7%9B%AE%E6%9E%97/id1382553643">App Store</a>]
-        </ul>
+<tr>
+  <article class="post-content">
 
-        <ul><b>Sound Visualizer</b><br>
-            [<a href="https://yangzi33.github.io/sound-visualizer">demo</a>]
-        </ul>
+  <td valign="middle" width="35%">
+      <img src="{{ site.baseurl }}/data/thonk.png" alt="Ziyue Yang"
+        style="
+          width: 10rem;
+          border-radius: 10%;
+        "/>
 
-        <ul><b>Todo</b><br>
-            Django app for Bigtheta's project introduction.<br>
-            [<a href="https://github.com/yangzi33/django-todo">code</a>]
-        </ul>
-        
-        <i>*: Ongoing projects</i><br>
+    <header class="post-header">
+      <h1 style="font-size: 1.8rem; margin-top: 0; margin-bottom: 0; margin-left: 13px;">
+                  Ziyue Yang</h1>
+    </header>
 
-        <h1><a name="skills"></a>Technical Skills</h1>
-        <ul>
-            <li>
-                Programming
-                <ul>
-                    <li>I majorly work with <b>Python, C++, and Java</b>.
-                    <li>My work at Cohesion is mostly
-                        Swift and JavaScript programming.
-                    <li>I have also played with some other languages like Haskell, Golang,
-                        and Ruby.
-                </ul>
-            <li>
-                Web Development
-                <ul>
-                    <li>I am familiar with the <b>Django</b> and <b>React</b>; I also have some but limited knowledge on Rails.
-                    <li>I have worked with <b>SQLite</b> and some PostgreSQL.
-                </ul>
-            <li>
-                Machine Learning
-                <ul>
-                    <li>Making progress on building image recognition models using CNN, which will be
-                        trained on the HECKTOR datasets provided by <a href="https://www.miccai2020.org/"><i>MICCAI 2020</i></a>.
-                    <li>I have worked with various libraries including PyTorch and Keras.
-                </ul>
-            <li>I have experience developing mobile apps on Xcode and Android Studio.
-            <li>I am familiar with UNIX programming. I run both Linux and macOS at home.
-        </ul>
-        <!--- <h1><a name="curricula"></a>Selected Curricula</h1>
-            <ul>
-                <li>Computer Science: Data Structures, Convolutional
-            Neural Networks, Theory of Computation, Systems Programming.
-            <li>Statistics: Methods for Machine Learning, Methods of Data Analysis, Probability.
-            <li>Mathemtics: Linear Algebra, Real Analysis, Multivariable Calculus. </ul>
-            -->
+    <header class="site-header px2 px-responsive">
+      <div class="wrap">
+        <div class="measure">
+          <div class="clearfix"></div>
+          {% if site.show_social_icons %}
+            {% include social_links.html %}
+          {% endif %}
+        </div>
+      </div>
+    </header>
+  </td>
 
-        <h1><a name="other"></a>Miscellaneous</h1>
-        <ul>
-            <li><u><a href="https://www.name-coach.com/ziyue-yang-6de7fde3-3026-4cd1-acfa-5b7c30cc036e?share_trigger=true">How to pronounce my name</a></u>: similar to "zee", "you" in English.
-            <li><a href="https://kaggle.com/yangzi33">My Kaggle</a>.
-            <li>Fan of <a href="https://www.formula1.com/">Formula One Racing</a>.
-        </ul>
-</html>
+  <td valign="top" width="65%">
+    <p>
+    I'm a third-year undergraduate student pursuing a degree in 
+    Computer Science, Statistics, and Mathematics. My academic interests intersect data science, applied machine
+    learning methods, and computer vision. I'm involved in the LearnAI program at UofTAI.
+        <br><br>
+    Previously, I interned as an iOS developer at Cohesion, where I majorly worked with Swift and React Native. I also led a group at Bigtheta, demonstrated software design principles and built Django-based apps.
+    <br><br>
+    I constantly seek for opportunities where I can make positive impacts and gain valuable experience from the industry, while maintaining a healthy work-life balance.
+    
+    <!-- I watch Formula One racing and play some chess in my spare time. -->
+
+    </p>
+  </td>
+
+  </article>
+</tr>
+
+</table>
+
+<br><br>
+
+
+<div id="Projects" class="post">
+    <article class="post-content">
+        <header class="post-header">
+          <h1 style="font-size: 2rem; margin-top: 0; margin-bottom: 0">Projects</h1>
+        </header>
+    </article>
+</div>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+<tr>
+  <td valign="middle" width="25%">
+      <img src="{{ site.base_url }}/data/projects/rest-transparent.png">
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>UniMart</h3>
+    <p>
+      <!-- Full-stack application  -->
+    </p>
+    <p>
+        <a href="https://github.com/yangzi33/unimart/">code</a> | demo
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+    <a href="https://github.com/jacobjinkelly/sequencing">
+      <img src="{{ site.base_url }}/images/projects/sequencing/sequencing.png">
+    </a>
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>Genomic Sequencing</h3>
+    <p>
+        To learn about genomic sequencing, I implemented
+        <a href="https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm">Boyer-Moore</a>
+        for performing exact sequence alignment. I also implemented
+        the <a href="https://web.cs.ucdavis.edu/~gusfield/cs224f09/">Z algorithm</a>
+        to efficiently generate indices of the query string needed for the Boyer-Moore
+        algorithm.
+    </p>
+    <p> <strong>Jacob Kelly</strong>
+    </p>
+    <p>
+        <a href="https://github.com/jacobjinkelly/sequencing">code</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+    <a href="https://github.com/UTMIST/ICLR-2019-Challenge">
+      <img src="{{ site.base_url }}/images/projects/iclr2019/iclr2019.jpg">
+    </a>
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>ICLR 2019 Reproducibility Challenge</h3>
+    <p>
+        We implemented the ICLR 2019 submission (later accepted)
+        "<a href="https://openreview.net/forum?id=B1GMDsR5tm">Initialized Equilibrium Propagation for Backprop-Free Training</a>"
+        by O'Connor et al. as part of the
+        <a href="https://reproducibility-challenge.github.io/iclr_2019/">
+        ICLR 2019 Reproducibility Challenge</a>.
+    </p>
+    <p>
+        <sup>†</sup><a href="https://github.com/mchanchee">Matthieu Chan Chee</a>,
+        <a href="https://gitlab.com/tekne">Jad Ghalayini</a>,
+        <strong>Jacob Kelly</strong>,
+        <a href="https://winniexu.ca/">Winnie Xu</a>
+    </p>
+    <p>
+        <a href="https://github.com/UTMIST/ICLR-2019-Challenge">code</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+    <a href="https://github.com/jacobjinkelly/deepsort">
+      <img src="{{ site.base_url }}/images/projects/deepsort/deepsort.png">
+    </a>
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>DeepSort</h3>
+    <p>
+        I implemented a sequence to sequence model to learn to sort numbers.
+        I used an encoder-decoder LSTM architecture with a "pointer" attention
+        mechanism developed by Vinyals et al.
+        (<a href="https://arxiv.org/abs/1506.03134">Pointer Networks</a>)
+        to take advantage of the fact that the output of the model is a
+        permutation of its input.
+    </p>
+    <p> <strong>Jacob Kelly</strong>
+    </p>
+    <p>
+        <a href="{{ site.baseurl }}/2018/06/20/sorting-numbers-with-a-neural-network/">blog</a> |
+        <a href="https://github.com/jacobjinkelly/deepsort">code</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+    <a href="https://github.com/brunofalmeida/PocketGuide-Android">
+      <img src="{{ site.baseurl }}/images/projects/pocketguide/pocketguide.png">
+    </a>
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>Pocket Guide</h3>
+    <p>
+        We developed an Android app for indoor navigation through
+        <a href="https://www.sickkids.ca/">SickKids</a>
+        hospital using bluetooth signals from
+        <a href="https://estimote.com/">Estimote Beacons</a>. We use
+        <a href="https://en.wikipedia.org/wiki/Shortest_Path_Faster_Algorithm">SPFA</a>
+        on a map of beacon locations to efficiently generate the shortest path
+        from the user's current location to their destination. We estimate
+        the current location using signal strengths from nearby beacons
+        and track over time using an exponentially weighted average.
+        Developed in summer 2016 at <a href="https://www.cossette.com/">Cossette</a>.
+    </p>
+    <p> <sup>†</sup><a href="http://brunoalmeida.ca/">Bruno Almeida</a>,
+        <strong>Jacob Kelly</strong>,
+        <a href="https://github.com/gabrielcyeung">Gabriel Yeung</a>
+    </p>
+    <p>
+        <a href="{{ site.baseurl }}/images/projects/pocketguide/pocketguide_slides.pdf">slides</a> |
+        <a href="https://github.com/brunofalmeida/PocketGuide-Android">code</a>
+    </p>
+  </td>
+</tr>
+
+</table>
+
+<p><sup>†</sup>alphabetical order</p>
+
+<div id="Teaching" class="post">
+    <article class="post-content">
+        <header class="post-header">
+          <h1 style="font-size: 2rem; margin-top: 0; margin-bottom: 0">ff</h1>
+        </header>
+    </article>
+</div>
+
+<p>I have been a Teaching Assistant for the following:</p>
+<ul>
+  <li><a href="https://probmlcourse.github.io/sta414/">STA414/2104: Statistical Methods for Machine Learning II</a> (Winter 2020)</li>
+</ul>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Learning to Sort with a Neural Network &#8211; Ziyue Yang</title>
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Exploring how one might teach a neural net to sort numbers.">
+    <meta name="robots" content="all">
+    <meta name="author" content="Ziyue Yang">
+    
+    <meta name="keywords" content="">
+    <link rel="canonical" href="http://localhost:4000/2018/06/20/sorting-numbers-with-a-neural-network/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Ziyue Yang" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?202011100027" type="text/css">
+
+    <!-- Fonts -->
+    
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+      <link href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" rel="stylesheet">
+    
+
+    <!-- MathJax -->
+    
+    <script type="text/x-mathjax-config" async>
+    MathJax.Hub.Config({
+      "HTML-CSS": {
+        fonts: ["Latin-Modern"]
+      }
+    });
+    </script>
+    <script type="text/javascript" async
+        src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Learning to Sort with a Neural Network">
+    <meta property="og:description" content="Ziyue Yang's Personal Website">
+    <meta property="og:url" content="http://localhost:4000/2018/06/20/sorting-numbers-with-a-neural-network/">
+    <meta property="og:site_name" content="Ziyue Yang">
+    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@yangzi33" />
+        <meta name="twitter:creator" content="@yangzi33" />
+    
+    <meta name="twitter:title" content="Learning to Sort with a Neural Network" />
+    <meta name="twitter:description" content="Exploring how one might teach a neural net to sort numbers." />
+    <meta name="twitter:url" content="http://localhost:4000/2018/06/20/sorting-numbers-with-a-neural-network/" />
+    
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Meta for different platforms -->
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <script type="text/javascript">
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+       ga('create', 'UA-148681655-1', 'auto');
+       ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body class="site">
+  
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <!-- <a href="http://localhost:4000" class="site-title">Ziyue Yang</a> -->
+      <nav class="site-nav">
+        
+
+
+<a href="http://localhost:4000">About</a>
+<a href="http://localhost:4000#Projects">Projects</a>
+<a href="http://localhost:4000/data/resume.pdf">Résumé</a>
+
+
+
+    
+
+    
+        <a href="/bookshelf/">Bookshelf</a>
+    
+
+
+
+    
+
+    
+        <a href="/blog/">Blog</a>
+    
+
+
+
+    
+
+    
+        <a href="/misc/">Misc.</a>
+    
+
+
+
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Learning to Sort with a Neural Network</h1>
+  <span class="post-meta">Jun 20, 2018</span><br>
+  
+  <span class="post-meta small">
+  
+    5 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>I recently came across an interesting challenge: sorting numbers with a neural
+network<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. In contrast to other machine learning problems, this one is already
+solved by classical methods (e.g. quicksort). And of course, the data we could
+generate to feed to a machine learning model to learn how to sort is endless, so
+what makes this problem interesting is how <em>little</em> data a machine learning
+model would need to learn how to sort.</p>
+
+<h2 id="generalization-to-longer-sequences">Generalization to Longer Sequences</h2>
+<p>One of the most useful properties we could have would be for the model to learn
+an algorithm which generalizes to longer input sequences. In particular, the
+actual model architecture would readily need to have the capacity to generalize
+to longer sequences, and the learning algorithm which trains it would have to
+regularize appropriately so that the model does not overfit to the shorter
+sequences it sees during training.</p>
+
+<h2 id="a-naive-approach">A Naive Approach</h2>
+<p>This problem obviously requires us to learn a function which maps sequences to
+sequences, and an obvious way to perform this will be using an encoder-decoder
+RNN architecture, as used for translation problems. One can do better by using
+a common variant of this architecture: augmentation via an attention mechanism.
+But can we do even better?</p>
+
+<h1 id="an-improvement">An Improvement</h1>
+
+<h2 id="outputs-correspond-directly-to-inputs">Outputs correspond directly to inputs</h2>
+<p>In contrast to many sequence to sequence problems, the output of the model
+will in fact be elements of the input. Many sequence to sequence problems are
+some sort of translation between domains, and hence, obviously, outputs will
+correspond to inputs <em>roughly</em> in a one-to-one manner, depending on the domain.
+But in sorting, outputs correspond to inputs <em>precisely</em> in a one-to-one manner,
+i.e. the output is a permutation of the input.</p>
+
+<h2 id="pointer-networks">Pointer Networks</h2>
+<p>The issue with returning a prediction corresponding to one of the input elements
+is that the there are a <em>variable number</em> of them depending on the specific
+example. However, it turns out we can use a simple trick to modify our attention
+mechanism slightly so that we can get a prediction over the input elements. This
+architecture, called a Pointer Network, is described in much more detail in the
+<a href="https://arxiv.org/pdf/1506.03134.pdf">original paper</a>.</p>
+
+<h1 id="additional-observations">Additional Observations</h1>
+<p>There are in fact a lot of other interesting ideas one might apply to this
+problem. Here are some speculations and ideas that I had that I haven’t yet
+gotten the chance to try out.</p>
+
+<h2 id="invariance-to-permutation">Invariance to Permutation</h2>
+<p>One crucial invariance in the sorting problem, in contrast to most other
+sequence to sequence problems (e.g. translation), is
+that the order of the inputs does not affect the outcome. Or, as
+<a href="http://fastml.com/introduction-to-pointer-networks/">FastML writes</a></p>
+
+<blockquote>
+  <p>In essence we’re dealing with sets, not sequences, as input. Sets don’t have
+inherent order, so how elements are permuted ideally shouldn’t affect the
+outcome.</p>
+</blockquote>
+
+<p>So, my comment earlier about us wanting to learn a function mapping from
+sequence to sequence is actually not quite true. One approach to fixing this
+problem might be including all possible permutations of a sequence, along with
+the (same) output in the training set, essentially “emphasizing”<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> to the model
+that the output should be invariant to permutation. However, this would be
+extremely expensive (factorial growth with the length of the sequence) and might
+not even work (i.e. “emphasize” to the model that order doesn’t matter).
+Instead, it’d be much better if we could encode this invariance in the design of
+the architecture itself. This is what the original authors of the Pointer
+Network did, and you can read more about it
+<a href="https://arxiv.org/pdf/1511.06391.pdf">here</a>.</p>
+
+<h2 id="elastic-weight-consolidation">Elastic Weight Consolidation</h2>
+<p>I recently read the paper describing
+<a href="https://arxiv.org/pdf/1612.00796.pdf">this method</a> to do incremental
+learning<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>, and I thought I might use it to try to help the network generalize
+to longer sequences. In particular, one could use a form of curriculum learning:
+incrementally teach the model to sort longer and longer sequences, (using EWC to
+“overcome catastrophic forgetting”) and this might lead the network to better
+generalization (unfortunately I haven’t been able to do any experiments yet).</p>
+
+<h2 id="amount-of-computation-at-each-step">Amount of computation at each step</h2>
+<p>A sequence to sequence model will, at each step, perform the same number of
+operations. Even simple sorting algorithms like insertion sort perform different
+amounts of computation at each step. It seems unreasonable for the decoder in
+our architecture to perform the same amount of steps whether it’s supposed to
+spit out 100 more numbers or 5. Once again, it turns out someone has already
+thought of this: it’s called
+<a href="https://arxiv.org/pdf/1603.08983.pdf">Adaptive Computation Time</a>
+and you can read more about it on
+<a href="https://distill.pub/2016/augmented-rnns/#adaptive-computation-time">distill</a> as
+well.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>There is still plenty of potential future work to be done. More experiments
+should be performed looking at generalization to longer sequences, the
+performance of the models against the permutation metric and the nondecreasing
+metric<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>, and coming up with other metrics and visualizations to better
+understand how to further improve these models.</p>
+
+<p>Even a simple toy problem like sorting turns out to spark a lot of interesting
+intuitions, and led me to discover a lot of cool new architectures and
+optimization schemes.</p>
+
+<hr />
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>In particular sorting a finite set of integers. (Or, if one wanted to be really pedantic, an arbitrary totally ordered finite set) <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>It turns out there’s actually a name for this intuition of hand crafting the examples one feeds to a model: curriculum learning. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Continually learning new tasks without forgetting old ones. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>i.e. permutation metric being whether or not the network’s output is permutation of the input, and nondecreasing metric being whether or not the network’s output is nondecreasing sequence (i.e. “sorted”) <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</article>
+
+
+
+
+  <div class="py2 post-footer">
+  <img src="/images/about/me.jpg" alt="Jacob Kelly" class="avatar" />
+  <p>
+    If you liked this post,<br>
+    checkout the rest of my <a href="http://localhost:4000/blog">blog</a>,<br>
+    or learn more <a href="http://localhost:4000">about me</a>.
+  </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">GitHub</a>.
+    </small>
+  </div>
+</footer>
+
+
+</body>
+</html>
