@@ -8,6 +8,7 @@ url:         "https://yangzi33.github.io"
 date_format: "%b %-d, %Y"
 header_pages:
  - resume.md
+ - coursework.md
  - blog/index.html
  - miscellaneous.md
 
