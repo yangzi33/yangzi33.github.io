@@ -11,7 +11,7 @@ tags: misc, miscellaneous
     }
 </style>
 
-I add random stuff to this page whenever I feel like it.
+I add random stuff to this page whenever I feel like it, for you to know more about me :)
 
 ---
 
