@@ -58,4 +58,4 @@ Essential course I have taken/am taking at the University of Toronto.
 
 <sup>†</sup>: will be taken starting January 2021.
 
-<sup>‡</sup>: Graduate level.
+<sup>‡</sup>: graduate level.
