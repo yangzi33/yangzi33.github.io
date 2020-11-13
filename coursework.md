@@ -15,7 +15,7 @@ tags: coursework
 ## Online Courses
 
 - [Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) ([*Fei-Fei Li*](https://profiles.stanford.edu/fei-fei-li) *et al.*)
-- [Machine Learning](https://www.coursera.org/learn/machine-learning) ([*Andrew Ng*](https://www.andrewng.org/))
+- [Machine Learning](http://cs229.stanford.edu/) ([*Andrew Ng*](https://www.andrewng.org/))
 - AWS Cloud Practitioner Essentials (*Amazon*)
 
 ## Essential Courses
@@ -31,6 +31,7 @@ which I have taken/am taking/will take soon at the University of Toronto.
 - <sup>†</sup>CSC302: Engineering Large Software Systems
 - CSC301: Introduction to Software Engineering
 - CSC265: Enriched Data Structures and Analysis ([*Faith Ellen*](http://www.cs.toronto.edu/~faith/))
+	<!-- - The most difficult course I've ever taken. Advanced data structures (e.g. leaf-oriented non-blocking binary search trees) are covered with in-depth details. Topics include randomized algorithms, amortized analysis, heaps, graph representations, and minimum spanning trees. -->
 - CSC258: Computer Organization
 - CSC240: Enriched Theory of Computation ([*Faith Ellen*](http://www.cs.toronto.edu/~faith/), [*James Cook*](http://www.falsifian.org/))
 - CSC209: C and Systems Programming ([*Karen Reid*](https://www.cs.toronto.edu/~reid/))
@@ -39,6 +40,7 @@ which I have taken/am taking/will take soon at the University of Toronto.
 ### Statistics
 
 - <sup>†‡</sup>STA414/2104: Methods for Machine Learning II ([*Murat Erdogdu*](http://www.cs.toronto.edu/~erdogdu/))
+	<!-- - Topics include naive Bayes, stochastic variational inference, Marko chain Monte Carlo, and GANs. -->
 - <sup>†</sup>STA365: Applied Bayesian Statistics ([*Daniel Simpson*](https://dpsimpson.github.io/))
 <!-- - <sup>†</sup>STA355: Theory of Statistical Practice ([*Keith Knight*](http://www.utstat.utoronto.ca/keith/home.html)) -->
 - STA314: Methods for Machine Learning I ([*Daniel Simpson*](https://dpsimpson.github.io/))
