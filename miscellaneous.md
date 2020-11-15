@@ -25,7 +25,7 @@ I add random stuff to this page whenever I feel like it, for you to know more ab
 
 - You can find a bunch of sky pictures on my [Instagram](https://instagram.com/zyang215), most of which are taken in the Beautiful British Columbia.
 
-- [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) is the key to succeed in math courses, no kidding.
+- [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) is the key to succeed in most of the undergrad math courses, no kidding.
 
 - I've recently started competing on [Kaggle](https://www.kaggle.com/yangzi33). Hope to get some medals in the future.
 

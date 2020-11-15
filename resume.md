@@ -11,6 +11,5 @@ tags: resume
       margin-bottom: 0;
     }
 </style>
-
-[PDF Version]({{ site.baseurl }}/data/resume.pdf)
+[PDF Version]({{ site.baseurl }}/resume.pdf)
 
