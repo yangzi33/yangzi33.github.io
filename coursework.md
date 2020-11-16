@@ -20,7 +20,7 @@ tags: coursework
 
 ## Essential Courses
 
-which I have taken/am taking/will take soon at the University of Toronto.
+which I have taken/am taking/<sup>†</sup>will take soon at the University of Toronto.
 
 
 ### Compute Science
@@ -59,6 +59,5 @@ which I have taken/am taking/will take soon at the University of Toronto.
 
 ---
 
-<sup>†</sup>: will be taken starting January 2021.
 
 <sup>‡</sup>: graduate level.
