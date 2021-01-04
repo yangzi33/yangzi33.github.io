@@ -17,7 +17,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for Ziyue Yang" href="/feed.xml" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202011261759" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202101041002" type="text/css">
 
     <!-- Fonts -->
     
@@ -268,7 +268,7 @@ $(document).ready(function(){
     Computer Science, Statistics, and Mathematics. My interests intersect software engineering, machine
     learning, and data science.
         <br><br>
-    Previously, I interned as an iOS developer at <i>Cohesion</i>, where I majorly worked with Swift and React Native. I also led a group at <i>Bigtheta</i>, demonstrated software design principles, and built Django-based apps. I'm also involved in the LearnAI program at UofTAI since September 2020.
+    Previously, I interned as an iOS developer under <i>KWG Group Holdings</i> at the <i>Cohesion</i> group, where I majorly worked with Swift and React Native. I led a group at <i>Bigtheta</i>, demonstrated software design principles and built web applications. I'm also involved in the LearnAI program at UofTAI since September 2020.
     <br><br>
     I constantly seek opportunities, looking forward to making positive impacts and gaining valuable experience from the industry, while maintaining a healthy work-life balance. 
 
@@ -296,62 +296,98 @@ $(document).ready(function(){
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
 <tr>
-  <td valign="middle" width="25%">
+  <td valign="middle" width="20%">
+      <img src="/data/projects/mnist.png">
+  </td>
+  <td valign="top" width="80%">
+
+  <h3><sup>§</sup>MNIST Classifier</h3>
+    <p>
+      <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> classifier implemented with numpy only. This project emphasizes the understanding of fundamental level machine learning concepts and usage.
+    </p>
+    <p>
+      <a href="https://github.com/yangzi33/mnist-classifier">code</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="20%">
+      <img src="/data/projects/irls/irls.png">
+  </td>
+  <td valign="top" width="80%">
+
+    <h3>PIRLS</h3>
+    <p>
+      Model built using <i>parsnip</i> engine that computes the logistic Lasso using coordinate descent on the penalized iteratively reweighted least squares algorithm.
+    </p>
+    <p>
+      <a href="https://github.com/yangzi33/pirls">code</a> | vignette
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="20%">
+      <img src="/data/projects/kmeans/warhol-stitch.png">
+  </td>
+  <td valign="top" width="80%">
+
+    <h3>Image Stitcher</h3>
+    <p>
+      I implemented functions in a module that takes image inputs and transform them into <i>cross-stitch</i> patterns. The module uses K-means algorithm to cluster images into a chosen number of groups based on the RGB information. Helper methods on choosing the ideal number of clusters are provided.
+    </p>
+    <p>
+      <a href="https://github.com/yangzi33/mnist-classifier">code</a> | <a href="/data/projects/kmeans/vignette.pdf">vignette</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="20%">
       <img src="/data/projects/rest-transparent.png">
   </td>
-  <td valign="top" width="75%">
+  <td valign="top" width="80%">
 
     <h3>UniMart</h3>
     <p>
-      <b>Ziyue Yang</b>, Won Kim
-    </p>
-    <p>
         <a href="https://github.com/yangzi33/unimart/">code</a> | demo
     </p>
-  </td>
-</tr>
-
-<tr>
-  <td valign="middle" width="25%">
-      <img src="/data/projects/pca.png">
-  </td>
-  <td valign="top" width="75%">
-
-    <h3>House Prices Prediction with Gradient Boost Classifier</h3>
     <p>
-        <a href="https://www.kaggle.com/yangzi33/housepriceprediction/">Notebook</a>
+      <b>Ziyue Yang</b>, Won Kim
     </p>
   </td>
 </tr>
 
 <tr>
-  <td valign="middle" width="25%">
-      <img src="/data/projects/agenda.png">
+  <td valign="middle" width="20%">
+      <img src="/data/projects/agenda/agenda.png">
   </td>
-  <td valign="top" width="75%">
+  <td valign="top" width="80%">
 
     <h3>Agenda</h3>
     <p>
-      Android calendar app.
+      Android calendar app which allows multiple users to store event data locally. Features include searching events by names, creating events based on given frequencies, and tagging events. I majorly designed and implemented the Android GUI. I also programmed SQLite database helper to query user data. This app was developed in Winter 2020 in my software design course.
     </p>
+    <br>
     <p>
-      <b>Ziyue Yang</b>, Yunlong Chen, Xi Zheng, Juliana Chu, Yeuk Lam Ng, Jiajun Chen</p>
+      <b>Ziyue Yang</b>, Yunlong Chen, Xi Zheng, Juliana Chu, Yeuk Lam Ng, Jiajun Chen
+    </p>
     <p>
         <a href="https://github.com/yangzi33/agenda">code</a>
     </p>
   </td>
 </tr>
 
-
 <tr>
-  <td valign="middle" width="15%">
+  <td valign="middle" width="20%">
       <img src="/data/projects/fpv.png">
   </td>
-  <td valign="top" width="75%">
+  <td valign="top" width="80%">
 
     <h3>FPV Navigator</h3>
     <p>
-     First-person view navigator rendered in command line, inspired by <a href="/data/projects/ray-casting.gif">this algorithm</a>.
+     First-person view navigator implemented in C++ inspired by <a href="/data/projects/ray-casting.gif">the algorithm</a> in Wolfenstein 3D. The algorithm takes an input of 2-dimensional maps made up of blocks and spaces, and renders 3D spaces based on the maps. This navigator allows player to "walk around" in the command line-rendered space.
     </p>
     <p>
         <a href="https://github.com/yangzi33/ConsoleFPV">code</a>
@@ -360,30 +396,14 @@ $(document).ready(function(){
 </tr>
 
 <tr>
-  <td valign="middle" width="15%">
+  <td valign="middle" width="20%">
       <img src="/data/projects/treemap.png">
   </td>
-  <td valign="top" width="85%">
+  <td valign="top" width="80%">
 
     <h3>Treemap</h3>
-    <p>Yizhou Hu<sup>∇</sup>, <b>Ziyue Yang</b><sup>∇</sup></p>
     <p><a href="https://github.com/yangzi33/Treemap-Visualizer/">code</a> | descriptions</p>
-  </td>
-</tr>
-
-<tr>
-  <td valign="middle" width="25%">
-      <img src="/data/projects/mnist.png">
-  </td>
-  <td valign="top" width="75%">
-
-    <h3><sup>§</sup>MNIST Classifier</h3>
-    <p>
-      <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> classifier implemented from scratch with numpy only.
-    </p>
-    <p>
-      <a href="https://github.com/yangzi33/mnist-classifier">code</a>
-    </p>
+    <p>Yizhou Hu<sup>∇</sup>, <b>Ziyue Yang</b><sup>∇</sup></p>
   </td>
 </tr>
 
