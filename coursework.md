@@ -39,13 +39,11 @@ which I have taken/am taking/<sup>†</sup>will take soon at the University of T
 
 ### Statistics
 
-- <sup>†‡</sup>STA414/2104: Methods for Machine Learning II ([*Murat Erdogdu*](http://www.cs.toronto.edu/~erdogdu/))
+- <sup>‡</sup>STA414/2104: Methods for Machine Learning II ([*Murat Erdogdu*](http://www.cs.toronto.edu/~erdogdu/))
 	<!-- - Topics include naive Bayes, stochastic variational inference, Marko chain Monte Carlo, and GANs. -->
-- <sup>†</sup>STA365: Applied Bayesian Statistics ([*Daniel Simpson*](https://dpsimpson.github.io/))
 <!-- - <sup>†</sup>STA355: Theory of Statistical Practice ([*Keith Knight*](http://www.utstat.utoronto.ca/keith/home.html)) -->
 - STA314: Methods for Machine Learning I ([*Daniel Simpson*](https://dpsimpson.github.io/))
 - STA304: Surveys, Sampling and Observational Data ([*Rohan Alexander*](https://rohanalexander.com), [*Samantha Jo-Caetano*](https://www.statistics.utoronto.ca/people/directories/all-faculty/samantha-jo-caetano))
-- <sup>†</sup>STA303: Methods of Data Analysis II ([*Liza Bolton*](https://www.statistics.utoronto.ca/people/directories/all-faculty/liza-bolton))
 - <sup>‡</sup>STA302/1001: Methods of Data Analysis I / Applied Regression Analysis ([*Shivon Sue-Chee*](https://www.statistics.utoronto.ca/people/directories/all-faculty/shivon-sue-chee))
 - STA261: Probability and Statistics II / Statistical Inference (*Robert Zimmerman*)
 - STA257: Probability and Statistics I ([*Katherine Daignault*](https://www.statistics.utoronto.ca/people/directories/all-faculty/katherine-daignault))
