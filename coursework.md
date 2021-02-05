@@ -32,7 +32,7 @@ which I have taken/am taking/<sup>†</sup>will take soon at the University of T
 - CSC301: Introduction to Software Engineering
 - CSC265: Enriched Data Structures and Analysis ([*Faith Ellen*](http://www.cs.toronto.edu/~faith/))
 	<!-- - The most difficult course I've ever taken. Advanced data structures (e.g. leaf-oriented non-blocking binary search trees) are covered with in-depth details. Topics include randomized algorithms, amortized analysis, heaps, graph representations, and minimum spanning trees. -->
-- CSC258: Computer Organization
+- CSC258: Computer Organization ([*Rabia Bakhteri*](http://www.cs.toronto.edu/~rbakhteri/))
 - CSC240: Enriched Theory of Computation ([*Faith Ellen*](http://www.cs.toronto.edu/~faith/), [*James Cook*](http://www.falsifian.org/))
 - CSC209: C and Systems Programming ([*Karen Reid*](https://www.cs.toronto.edu/~reid/))
 - CSC207: Software Design ([*Lindsey Shorser*](http://www.math.toronto.edu/cms/people/faculty/shorser-lindsey/))
