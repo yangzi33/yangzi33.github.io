@@ -17,7 +17,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for Ziyue Yang" href="/feed.xml" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202101051541" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202102181705" type="text/css">
 
     <!-- Fonts -->
     
@@ -294,6 +294,36 @@ $(document).ready(function(){
 </div>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+<tr>
+  <td valign="middle" width="20%">
+      <img src="/data/projects/sentence-cnn.png">
+  </td>
+  <td valign="top" width="80%">
+
+  <h3><sup>§</sup>Sentence Classification using Convolutional Neural Networks</h3>
+    <p>
+    </p>
+    <p>
+      <a href="https://github.com/yangzi33/sentence-cnn">code</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="20%">
+      <img src="/data/projects/tsla.png">
+  </td>
+  <td valign="top" width="80%">
+
+  <h3><sup>§</sup>Time Series Analysis: Forecasting TSLA Stock using Autoregressive Integrated Moving Average Model</h3>
+    <p>
+      We make predictions of Tesla's stock index using ARIMA model, which converts non-stationary stock data to stationary, allowing us to apply time series analysis and make more accurate forecasting. ARIMA is one of the most popular models to predict linear time series data.
+    </p>
+    <p>
+      <a href="https://www.kaggle.com/yangzi33/forecasting-tesla-stock-price-time-series-analysis?scriptVersionId=54686136">Notebook</a>
+    </p>
+  </td>
+</tr>
 
 <tr>
   <td valign="middle" width="20%">
@@ -335,7 +365,7 @@ $(document).ready(function(){
 
     <h3>Image Stitcher</h3>
     <p>
-      I implemented functions in a module that takes image inputs and transform them into <i>cross-stitch</i> patterns. The module uses K-means algorithm to cluster images into a chosen number of groups based on the RGB information. Helper methods on choosing the ideal number of clusters are provided.
+      I implemented functions in a package that takes image inputs and transform them into <i>cross-stitch</i> patterns. The package uses K-means algorithm to cluster images into a chosen number of groups based on the RGB information. Helper methods on choosing the ideal number of clusters are provided.
     </p>
     <p>
       <a href="https://github.com/yangzi33/mnist-classifier">code</a> | <a href="/data/projects/kmeans/vignette.pdf">vignette</a>
@@ -387,7 +417,7 @@ $(document).ready(function(){
 
     <h3>FPV Navigator</h3>
     <p>
-     First-person view navigator implemented in C++ inspired by <a href="/data/projects/ray-casting.gif">the ray casting algorithm</a> in Wolfenstein 3D. The algorithm takes an input of 2-dimensional maps made up of blocks and spaces, and renders 3D spaces based on the maps. This navigator allows player to "walk around" in the command line-rendered space.
+     First-person view navigator implemented in C++ inspired by <a href="/data/projects/ray-casting.gif">the ray casting algorithm from Wolfenstein 3D</a>. The algorithm takes an input of 2-dimensional maps made up of blocks and spaces, and renders 3D spaces based on the maps. This navigator allows player to "walk around" in the command line-rendered space. This project uses some fundamental knowledge of linear algebra in 3D space.
     </p>
     <p>
         <a href="https://github.com/yangzi33/ConsoleFPV">code</a>
