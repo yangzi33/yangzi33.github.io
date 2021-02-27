@@ -11,5 +11,5 @@ tags: resume
       margin-bottom: 0;
     }
 </style>
-[PDF Version]({{ site.baseurl }}/resume.pdf)
+[PDF Version]({{ site.baseurl }}/ziyueyang_resume.pdf)
 
