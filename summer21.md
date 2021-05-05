@@ -10,13 +10,12 @@ tags: summer, 2021
       margin-bottom: 0;
     }
 </style>
-# Summer 2021
 
 ## CSC263H1
 
-[Notes](https://zyang.dev/summer-2021/csc263/csc263.html)
+[Notes]({{ site.baseurl }}/summer-2021/csc263/csc263-notes)
 
-[Lectures](https://zyang.dev/summer-2021/csc263/csc263-lectures)
+[Lectures]({{ site.baseurl }}/summer-2021/csc263/csc263-lectures)
 
 [Readings, Slides, Worksheets](https://q.utoronto.ca/courses/229641/pages/lectures)
 
