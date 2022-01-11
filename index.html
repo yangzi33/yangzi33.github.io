@@ -93,15 +93,31 @@ $(document).ready(function(){
 <br><br>
 
 
-<div id="stats-ml" class="post">
+<div id="projects" class="post">
     <article class="post-content">
         <header class="post-header">
-          <h1 style="font-size: 2rem; margin-top: 0; margin-bottom: 0">Statistics & Machine Learning</h1>
+          <h1 style="font-size: 2rem; margin-top: 0; margin-bottom: 0">Technical Projects</h1>
         </header>
     </article>
 </div>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+<tr>
+  <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/maze.png">
+  </td>
+  <td valign="top" width="80%">
+
+  <h3>Microblog</h3>
+    <p>
+     A microblogging web application written in Python and Flask, modified from the app that I originally built for SigmaHacks 3. Microblog has email support, user-following features, and I18n & L10n support. I am currently learning how to deploy it on Docker containers.
+    </p>
+    <p>
+      <a href="https://github.com/yangzi33/microblog">code</a>
+    </p>
+  </td>
+</tr>
 
 <tr>
   <td valign="middle" width="20%">
@@ -169,11 +185,31 @@ $(document).ready(function(){
 
 <tr>
   <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/agenda/agenda.png">
+  </td>
+  <td valign="top" width="80%">
+
+    <h3>Agenda</h3>
+    <p>
+      Android calendar app which allows multiple users to store event data locally. Features include searching events by names, creating events based on given frequencies, and tagging events. I majorly designed and implemented the Android GUI. I also programmed SQLite database helper to query user data. This app was developed in Winter 2020 in my software design course.
+    </p>
+    <br>
+    <p>
+      <b>Ziyue Yang</b>, Yunlong Chen, Xi Zheng, Juliana Chu, Yeuk Lam Ng, Jiajun Chen
+    </p>
+    <p>
+        <a href="https://github.com/yangzi33/agenda">code</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="20%">
       <img src="{{ site.base_url }}/data/projects/tsla.png">
   </td>
   <td valign="top" width="80%">
 
-  <h3><sup>§</sup>Time Series Analysis: Forecasting TSLA Stock Price using Autoregressive Integrated Moving Average Model</h3>
+  <h3>Time Series Analysis: Forecasting TSLA Stock Price using Autoregressive Integrated Moving Average Model</h3>
     <p>
       We make predictions of Tesla's stock price using ARIMA model, which converts non-stationary stock data to stationary, allowing us to apply time series analysis and make more accurate forecasting. ARIMA is one of the most popular models to predict linear time series data.
     </p>
@@ -229,17 +265,6 @@ $(document).ready(function(){
     </p>
   </td>
 </tr>
-</table>
-
-<div id="stats-ml" class="post">
-    <article class="post-content">
-        <header class="post-header">
-          <h1 style="font-size: 2rem; margin-top: 0; margin-bottom: 0">Software Engineering</h1>
-        </header>
-    </article>
-</div>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
 <tr>
   <td valign="middle" width="20%">
@@ -248,31 +273,12 @@ $(document).ready(function(){
   <td valign="top" width="80%">
 
     <h3>UniMart</h3>
+    <p>App to practice Django usage.</p>
     <p>
         <a href="https://github.com/yangzi33/unimart/">code</a> | demo
     </p>
     <p>
-      <b>Ziyue Yang</b>, Won Kim
-    </p>
-  </td>
-</tr>
-
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/agenda/agenda.png">
-  </td>
-  <td valign="top" width="80%">
-
-    <h3>Agenda</h3>
-    <p>
-      Android calendar app which allows multiple users to store event data locally. Features include searching events by names, creating events based on given frequencies, and tagging events. I majorly designed and implemented the Android GUI. I also programmed SQLite database helper to query user data. This app was developed in Winter 2020 in my software design course.
-    </p>
-    <br>
-    <p>
-      <b>Ziyue Yang</b>, Yunlong Chen, Xi Zheng, Juliana Chu, Yeuk Lam Ng, Jiajun Chen
-    </p>
-    <p>
-        <a href="https://github.com/yangzi33/agenda">code</a>
+      <b>Ziyue Yang</b>
     </p>
   </td>
 </tr>
@@ -310,5 +316,4 @@ $(document).ready(function(){
 <p>
   <sup>∇</sup>: equal contributions<br>
   <sup>§</sup>: ongoing<br>
-  <a href="{{ site.baseurl }}/resume">More project details here.</a>
 </p>
