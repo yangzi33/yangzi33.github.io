@@ -1,10 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Ziyue Yang</title>
-    <description>Ziyue Yang's Personal Website</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Ziyue Yang</title>
+		<description>Ziyue Yang's Personal Website</description>
+		<pubDate>Fri, 21 Jan 2022 04:17:39 +0000</pubDate>
+		<link>https://zyang.dev</link>
+		<atom:link href="http://fetchrss.com/rss/61ea339f6ebb5a5607020c0361ea33e39e10935a403056b2.xml" rel="self" type="application/rss+xml" />
+		<generator>https://fetchrss.com</generator>
+		<image>
+			<link>https://zyang.dev</link>
+			<url>https://www.google.com/s2/favicons?domain=https://zyang.dev</url>
+			<title>Ziyue Yang</title>
+		</image>
+
+		<item>
+			<title></title>
+			<link>https://twitter.com/yangzi33</link>
+			<description><![CDATA[<img src="https://zyang.dev/data/profile.jpg"><br><br><br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="https://fetchrss.com" target="_blank">FetchRSS</a>)</span>]]></description>
+			<dc:creator></dc:creator>
+			<pubDate>Fri, 21 Jan 2022 04:17:39 +0000</pubDate>
+			<media:content url="https://zyang.dev/data/profile.jpg" medium="image" />
+			<guid isPermaLink="false">https://twitter.com/yangzi33</guid>
+		</item>
+		<item>
+			<title></title>
+			<link>https://zyang.dev</link>
+			<description><![CDATA[<p>
+    I'm a fourth-year undergraduate student at the University of Toronto, pursuing a degree in
+    Statistics, Computer Science, and Mathematics. My interests intersect software engineering, machine
+    learning, and data science.
+        <br/><br/>
+    Previously, I interned as an iOS developer under <i>KWG Group Holdings</i> at the <i>Cohesion</i> group, where I majorly worked with Swift and React Native. I led a workshop at <i>Bigtheta</i>, demonstrated software design principles and built web applications. I was involved in the LearnAI program at UofTAI during the academic year 2020/21.
+    <br/><br/>
+    I constantly seek opportunities, looking forward to making positive impacts and gaining valuable experience from the industry, while maintaining a healthy work-life balance. 
+
     
-  </channel>
+
+    </p><br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="https://fetchrss.com" target="_blank">FetchRSS</a>)</span>]]></description>
+			<dc:creator></dc:creator>
+			<pubDate>Fri, 21 Jan 2022 04:17:39 +0000</pubDate>
+			<guid isPermaLink="false">https://zyang.dev</guid>
+		</item>
+		<item>
+			<title>Microblog</title>
+			<link>https://sigmahacks.org/</link>
+			<description><![CDATA[<p>
+     A microblogging web application written in Python and Flask, modified from the app that I originally built for <a href="https://sigmahacks.org/">SigmaHacks 3</a>. Microblog has email support, user-following features, and I18n & L10n support. I am currently learning how to deploy it on Docker containers.
+    </p><p>
+      <a href="https://github.com/yangzi33/microblog">code</a>
+    </p><br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="https://fetchrss.com" target="_blank">FetchRSS</a>)</span>]]></description>
+			<dc:creator></dc:creator>
+			<pubDate>Fri, 21 Jan 2022 04:17:39 +0000</pubDate>
+			<guid isPermaLink="false">https://sigmahacks.org/</guid>
+		</item>
+		<item>
+			<title>Optimal Pathfinder with Reinforcement Learning</title>
+			<link>https://github.com/yangzi33/qlearning-maze-solver</link>
+			<description><![CDATA[<p>
+      Software that discovers the optimal (shortest) path to a goal in a simulated maze environment. We implemented a Q learning algorithm that selects moves for the reinforcement learning agent. Exploration strategies include epsilon-greedy and the Boltzmann Stochastic Policy derived from the softmax of Q-values.
+    </p><p>
+      <a href="https://github.com/yangzi33/qlearning-maze-solver">code</a>
+    </p><br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="https://fetchrss.com" target="_blank">FetchRSS</a>)</span>]]></description>
+			<dc:creator></dc:creator>
+			<pubDate>Fri, 21 Jan 2022 04:17:39 +0000</pubDate>
+			<guid isPermaLink="false">https://github.com/yangzi33/qlearning-maze-solver</guid>
+		</item>
+		<item>
+			<title>Neural Network for Facial Expression Classification</title>
+			<link>https://github.com/yangzi33/face-nn</link>
+			<description><![CDATA[<p>
+      Fully-connected neural networks trained on a subset of <it>Toronto Faces Dataset</it>. We implemented the neural network from scratch and trained it by tuning a set of hyperparameters, and we modified the model architecture for better generalization. The model achieved an excellent testing accuracy of 71.69%.
+    </p><p>
+      <a href="https://github.com/yangzi33/face-nn">code</a>
+    </p><br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="https://fetchrss.com" target="_blank">FetchRSS</a>)</span>]]></description>
+			<dc:creator></dc:creator>
+			<pubDate>Fri, 21 Jan 2022 04:17:39 +0000</pubDate>
+			<guid isPermaLink="false">https://github.com/yangzi33/face-nn</guid>
+		</item>
+
+	</channel>
 </rss>

@@ -25,10 +25,10 @@ which I have taken/am currently taking<sup>†</sup> at the University of Toront
 
 ### Compute Science
 
-- <sup>†‡</sup>CSC413: Neural Networks and Deep Learning
-- <sup>†</sup>CSC369: Operating Systems
-- CSC343: Introduction to Databases
-- <sup>†</sup>CSC309: Programming on the Web
+- <sup>†‡</sup>CSC413: Neural Networks and Deep Learning ([*Jimmy Ba*](http://jimmylba.github.io/), [*Bo Wang*](https://vectorinstitute.ai/team/bo-wang/))
+- <sup>†</sup>CSC369: Operating Systems ([*Karen Reid*](https://www.cs.toronto.edu/~reid/))
+- CSC343: Introduction to Databases ([*Diane Horton*](https://www.cs.toronto.edu/~dianeh/))
+- <sup>†</sup>CSC309: Programming on the Web (*Mark Kazakevich*)
 - CSC265: Enriched Data Structures and Analysis ([*Faith Ellen*](http://www.cs.toronto.edu/~faith/))
 	<!-- - The most difficult course I've ever taken. Advanced data structures (e.g. leaf-oriented non-blocking binary search trees) are covered with in-depth details. Topics include randomized algorithms, amortized analysis, heaps, graph representations, and minimum spanning trees. -->
 - CSC258: Computer Organization ([*Rabia Bakhteri*](http://www.cs.toronto.edu/~rbakhteri/))
@@ -38,14 +38,14 @@ which I have taken/am currently taking<sup>†</sup> at the University of Toront
 
 ### Statistics
 
-- <sup>†</sup>STA492: Seminar in Statistics (topics TBD, possibly related to adversarial learning) ([*David Brenner*](https://www.statistics.utoronto.ca/people/directories/all-faculty/david-brenner))
+- <sup>†</sup>STA492: Seminar in Statistical Science (Topics TBD) ([*David Brenner*](https://www.statistics.utoronto.ca/people/directories/all-faculty/david-brenner))
 - <sup>†</sup>STA490: Statistical Consultation, Communication, and Collaboration ([*Liza Bolton*](https://www.statistics.utoronto.ca/people/directories/all-faculty/liza-bolton), [*Michael Moon*](https://www.statistics.utoronto.ca/people/directories/graduate-students/michael-jongho-moon))
 - <sup>‡</sup>STA414/2104: Probabilistic Machine Learning ([*Murat Erdogdu*](http://www.cs.toronto.edu/~erdogdu/))
 	<!-- - Topics include naive Bayes, stochastic variational inference, Marko chain Monte Carlo, and GANs. -->
 - STA355: Theory of Statistical Practice ([*Keith Knight*](http://www.utstat.utoronto.ca/keith/home.html))
 - STA347: Probability (*Mohammad Khan*)
 - STA314: Methods for Machine Learning ([*Daniel Simpson*](https://dpsimpson.github.io/))
-- STA304: Surveys, Sampling and Observational Data [*Samantha Jo-Caetano*](https://www.statistics.utoronto.ca/people/directories/all-faculty/samantha-jo-caetano))
+- STA304: Surveys, Sampling and Observational Data ([*Samantha Jo-Caetano*](https://www.statistics.utoronto.ca/people/directories/all-faculty/samantha-jo-caetano))
 - STA303: Methods of Data Analysis II (*George Stefan*)
 - STA302/1001: Methods of Data Analysis I / Applied Regression Analysis ([*Shivon Sue-Chee*](https://www.statistics.utoronto.ca/people/directories/all-faculty/shivon-sue-chee))
 - STA261: Probability and Statistics II / Statistical Inference (*Robert Zimmerman*)
