@@ -16,20 +16,19 @@ tags: coursework
 
 - [Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) ([*Fei-Fei Li*](https://profiles.stanford.edu/fei-fei-li) *et al.*)
 - [Machine Learning](http://cs229.stanford.edu/) ([*Andrew Ng*](https://www.andrewng.org/))
-- AWS Cloud Practitioner Essentials (*Amazon*)
+- AWS Certified Developer Associate Course (*Amazon*)
 
 ## Essential Courses
 
-which I have taken/am taking/<sup>†</sup>will take soon at the University of Toronto.
+which I have taken/am currently taking<sup>†</sup> at the University of Toronto.
 
 
 ### Compute Science
 
+- <sup>†‡</sup>CSC413: Neural Networks and Deep Learning
 - <sup>†</sup>CSC369: Operating Systems
-- <sup>†</sup>CSC343: Introduction to Databases
+- CSC343: Introduction to Databases
 - <sup>†</sup>CSC309: Programming on the Web
-- <sup>†</sup>CSC302: Engineering Large Software Systems
-- CSC301: Introduction to Software Engineering
 - CSC265: Enriched Data Structures and Analysis ([*Faith Ellen*](http://www.cs.toronto.edu/~faith/))
 	<!-- - The most difficult course I've ever taken. Advanced data structures (e.g. leaf-oriented non-blocking binary search trees) are covered with in-depth details. Topics include randomized algorithms, amortized analysis, heaps, graph representations, and minimum spanning trees. -->
 - CSC258: Computer Organization ([*Rabia Bakhteri*](http://www.cs.toronto.edu/~rbakhteri/))
@@ -39,17 +38,22 @@ which I have taken/am taking/<sup>†</sup>will take soon at the University of T
 
 ### Statistics
 
-- <sup>‡</sup>STA414/2104: Methods for Machine Learning II ([*Murat Erdogdu*](http://www.cs.toronto.edu/~erdogdu/))
+- <sup>†</sup>STA492: Seminar in Statistics (topics TBD, possibly related to adversarial learning) ([*David Brenner*](https://www.statistics.utoronto.ca/people/directories/all-faculty/david-brenner))
+- <sup>†</sup>STA490: Statistical Consultation, Communication, and Collaboration ([*Liza Bolton*](https://www.statistics.utoronto.ca/people/directories/all-faculty/liza-bolton), [*Michael Moon*](https://www.statistics.utoronto.ca/people/directories/graduate-students/michael-jongho-moon))
+- <sup>‡</sup>STA414/2104: Probabilistic Machine Learning ([*Murat Erdogdu*](http://www.cs.toronto.edu/~erdogdu/))
 	<!-- - Topics include naive Bayes, stochastic variational inference, Marko chain Monte Carlo, and GANs. -->
-<!-- - <sup>†</sup>STA355: Theory of Statistical Practice ([*Keith Knight*](http://www.utstat.utoronto.ca/keith/home.html)) -->
-- STA314: Methods for Machine Learning I ([*Daniel Simpson*](https://dpsimpson.github.io/))
-- STA304: Surveys, Sampling and Observational Data ([*Rohan Alexander*](https://rohanalexander.com), [*Samantha Jo-Caetano*](https://www.statistics.utoronto.ca/people/directories/all-faculty/samantha-jo-caetano))
-- <sup>‡</sup>STA302/1001: Methods of Data Analysis I / Applied Regression Analysis ([*Shivon Sue-Chee*](https://www.statistics.utoronto.ca/people/directories/all-faculty/shivon-sue-chee))
+- STA355: Theory of Statistical Practice ([*Keith Knight*](http://www.utstat.utoronto.ca/keith/home.html))
+- STA347: Probability (*Mohammad Khan*)
+- STA314: Methods for Machine Learning ([*Daniel Simpson*](https://dpsimpson.github.io/))
+- STA304: Surveys, Sampling and Observational Data [*Samantha Jo-Caetano*](https://www.statistics.utoronto.ca/people/directories/all-faculty/samantha-jo-caetano))
+- STA303: Methods of Data Analysis II (*George Stefan*)
+- STA302/1001: Methods of Data Analysis I / Applied Regression Analysis ([*Shivon Sue-Chee*](https://www.statistics.utoronto.ca/people/directories/all-faculty/shivon-sue-chee))
 - STA261: Probability and Statistics II / Statistical Inference (*Robert Zimmerman*)
 - STA257: Probability and Statistics I ([*Katherine Daignault*](https://www.statistics.utoronto.ca/people/directories/all-faculty/katherine-daignault))
 
 ### Mathematics
 - APM462: Nonlinear Optimization ([*Jonathan Korman*](https://www.math.toronto.edu/jkorman/))
+- APM306: Mathematics and Law (*Nicholas Derzko*)
 - MAT337: Introduction to Real Analysis ([*Tomas Kojar*](https://www.math.toronto.edu/cms/people/students/graduate/kojar-tomas/))
 - MAT237: Multivariable Calculus ([*Regina Rotman*](http://www.math.toronto.edu/rina/))
 - MAT224: Linear Algebra II ([*Sean Uppal*](http://www.math.utoronto.ca/cms/people/faculty/uppal-sean2/))
