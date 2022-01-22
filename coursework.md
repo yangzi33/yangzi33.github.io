@@ -25,7 +25,7 @@ which I have taken/am currently taking<sup>†</sup> at the University of Toront
 
 ### Compute Science
 
-- <sup>†‡</sup>CSC413: Neural Networks and Deep Learning ([*Jimmy Ba*](http://jimmylba.github.io/), [*Bo Wang*](https://vectorinstitute.ai/team/bo-wang/))
+- <sup>†‡</sup>CSC413/2516: Neural Networks and Deep Learning ([*Jimmy Ba*](http://jimmylba.github.io/), [*Bo Wang*](https://vectorinstitute.ai/team/bo-wang/))
 - <sup>†</sup>CSC369: Operating Systems ([*Karen Reid*](https://www.cs.toronto.edu/~reid/))
 - CSC343: Introduction to Databases ([*Diane Horton*](https://www.cs.toronto.edu/~dianeh/))
 - <sup>†</sup>CSC309: Programming on the Web (*Mark Kazakevich*)
