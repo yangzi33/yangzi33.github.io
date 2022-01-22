@@ -18,9 +18,11 @@ tags: coursework
 - [Machine Learning](http://cs229.stanford.edu/) ([*Andrew Ng*](https://www.andrewng.org/))
 - AWS Certified Developer Associate Course (*Amazon*)
 
-## Essential Courses
+## Essential Courses...
 
-which I have taken/am currently taking<sup>†</sup> at the University of Toronto.
+...that I have taken/am currently taking<sup>†</sup> at the University of Toronto.
+
+<sup>‡</sup>: graduate level.
 
 
 ### Compute Science
@@ -53,13 +55,8 @@ which I have taken/am currently taking<sup>†</sup> at the University of Toront
 
 ### Mathematics
 - APM462: Nonlinear Optimization ([*Jonathan Korman*](https://www.math.toronto.edu/jkorman/))
-- APM306: Mathematics and Law (*Nicholas Derzko*)
+- <sup>†</sup>APM306: Mathematics and Law (*Nicholas Derzko*)
 - MAT337: Introduction to Real Analysis ([*Tomas Kojar*](https://www.math.toronto.edu/cms/people/students/graduate/kojar-tomas/))
 - MAT237: Multivariable Calculus ([*Regina Rotman*](http://www.math.toronto.edu/rina/))
 - MAT224: Linear Algebra II ([*Sean Uppal*](http://www.math.utoronto.ca/cms/people/faculty/uppal-sean2/))
 - MAT102: Introduction to Proofs ([*Timothy Yusun*](https://tjyusun.com/))
-
----
-
-
-<sup>‡</sup>: graduate level.
