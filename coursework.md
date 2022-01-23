@@ -40,7 +40,7 @@ tags: coursework
 
 ### Statistics
 
-- <sup>†</sup>STA492: Seminar in Statistical Science (Topics TBD) ([*David Brenner*](https://www.statistics.utoronto.ca/people/directories/all-faculty/david-brenner))
+- <sup>†</sup>STA492: Seminar in Statistical Science (Deep Learning Research) ([*David Brenner*](https://www.statistics.utoronto.ca/people/directories/all-faculty/david-brenner))
 - <sup>†</sup>STA490: Statistical Consultation, Communication, and Collaboration ([*Liza Bolton*](https://www.statistics.utoronto.ca/people/directories/all-faculty/liza-bolton), [*Michael Moon*](https://www.statistics.utoronto.ca/people/directories/graduate-students/michael-jongho-moon))
 - <sup>‡</sup>STA414/2104: Probabilistic Machine Learning ([*Murat Erdogdu*](http://www.cs.toronto.edu/~erdogdu/))
 	<!-- - Topics include naive Bayes, stochastic variational inference, Marko chain Monte Carlo, and GANs. -->
