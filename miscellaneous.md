@@ -23,7 +23,7 @@ I add random stuff to this page whenever I feel like it, for you to know more ab
 
 - VIM >> EMACS.
 
-- You can find a bunch of sky pictures on my [Instagram](https://instagram.com/zyang215), most of which are taken in the Beautiful British Columbia.
+- You can find a bunch of sky pictures on my [Instagram](https://instagram.com/zyang215), most of which were taken in the Beautiful British Columbia.
 
 - [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) is the key to succeed in most of the early undergrad math courses.
 
