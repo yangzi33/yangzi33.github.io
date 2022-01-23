@@ -27,7 +27,7 @@ tags: coursework
 
 ### Compute Science
 
-- <sup>†‡</sup>CSC413/2516: Neural Networks and Deep Learning ([*Jimmy Ba*](http://jimmylba.github.io/), [*Bo Wang*](https://vectorinstitute.ai/team/bo-wang/))
+- <sup>†‡</sup>[CSC413/2516](https://uoft-csc413.github.io/2022/): Neural Networks and Deep Learning ([*Jimmy Ba*](http://jimmylba.github.io/), [*Bo Wang*](https://vectorinstitute.ai/team/bo-wang/))
 - <sup>†</sup>CSC369: Operating Systems ([*Karen Reid*](https://www.cs.toronto.edu/~reid/))
 - CSC343: Introduction to Databases ([*Diane Horton*](https://www.cs.toronto.edu/~dianeh/))
 - <sup>†</sup>CSC309: Programming on the Web (*Mark Kazakevich*)
