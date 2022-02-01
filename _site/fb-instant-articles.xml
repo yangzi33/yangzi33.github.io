@@ -7,5 +7,85 @@
       Ziyue Yang's Personal Website
     </description>
     
+        
+            <item>
+                <title>Gentle Intro to the Generative Adversarial Networks (GANs)</title>
+                <link>http://localhost:4000/2021/02/01/gan/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <h2 id="what-can-a-gan-do">What can a GAN do?</h2>
+
+<p>GAN is about generating data from scratch, like an artist. The modern GAN usage would involve generating data, like composing a symphony, or drawing a landscape. Thousands of GAN research papers were published in recent years, with broad areas ranging from game development, medical imaging, text-to-image translation, etc.</p>
+
+<h2 id="how-do-the-adversarial-nets-work">How do the Adversarial Nets work?</h2>
+
+<p>The GAN provides a framework for <strong>estimating generative models</strong> through an <strong>adversarial</strong> process. In this framework we train the following two models simultaneously:</p>
+
+<ul>
+  <li>\(G\) - Generative model that captures the data distribution.</li>
+  <li>\(D\) - Discriminative model that estimates the probability that a sample is from the training data, rather than \(G\).</li>
+</ul>
+
+<p>To learn \(G\)’s generated distrbution \(p_g\) from data input \(\mathbf{x}\), we define a prior on the input noise variables \(p_{\mathbf{z}}(\mathbf{z})\), then we use a differentiable function \(G\) to map \(\mathbf{z}\) to the data space as \(G(\mathbf{z};\theta_g)\).</p>
+
+<ul>
+  <li>Here \(G\) is being represented by a multilayer perceptron with parameters \(\theta_g\).</li>
+</ul>
+
+<p>Additionally, we define another multilayer perceptron \(D(\mathbf{x};\theta_d)\) that outputs a scalar.</p>
+
+<ul>
+  <li>Here \(D(\mathbf{x})\) represents the probability that \(\mathbf{x}\) coming from the data, rather than the generated \(p_g\).</li>
+</ul>
+
+<p>Finally, our goal is to train \(D\) to maximize the probability of assigning the correct label to <strong>both</strong> samples from \(G\) and training examples. Therefore, we will train \(G\) to <strong>minimize</strong> \(\log(1-D(G(\mathbf{z})))\). This yields a <em>two-player minimax game</em> with value function \(V(G,D)\):</p>
+
+\[\min_G\max_D V(D,G)=\mathbb{E}_{\mathbf{x}\sim p_{\text{data}}(\mathbf{x})}[\log D(\mathbf{x})]+\mathbb{E}_{\mathbf{z}\sim p_{\mathbf{z}}(\mathbf{z})}[\log(1-D(G(\mathbf{z})))].\]
+
+<p>Note that in the function space of arbitrary \(G\) and \(D\), there exists a <strong>unique</strong> solution, in which \(G\) recovers the training data distribution, and \(D\) will be constantly \(1/2\).</p>
+
+<p>If \(G\) and \(D\) are defined as <em>multilayer perceptrons</em>, we then are able to train the system using <em>backpropagation</em>.</p>
+
+<h2 id="too-much-math">Too Much Math…</h2>
+
+<p>To view this in a analogous way, try to think in the following way:</p>
+
+<ul>
+  <li>Consider the generative model \(G\) as a group of counterfeiters trying to produce fake paintings without being detected.</li>
+</ul>
+
+<p style="text-align: center;"><img src="https://www.drawinghowtodraw.com/stepbystepdrawinglessons/wp-content/uploads/2011/02/06-thief-color.png" alt="Thief" width="250px" /></p>
+
+<ul>
+  <li>Consider the discriminative model \(D\) as a group of police trying to detect the fake paintings.</li>
+</ul>
+
+<p style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1920px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" alt="Mona Lisa" width="250px" /></p>
+
+<p>Then the competition will drive both groups to improve their methods until the counterfeits draw paintings that are not disguinshable from the actual paintings anymore.</p>
+
+<h2 id="related-work">Related work</h2>
+
+<p>The following image illustrates the DCGAN, one of the most popular generator network design, which performes multiple transposed convolutions to upsample \(\mathbf{z}\) to generate the data \(\mathbf{x}\) (here, an image).</p>
+
+<p><img src="https://miro.medium.com/max/1400/1*ULAGAYoGGr5eEB2377ArYA.png" alt="DCGAN" /></p>
+
+<h2 id="references">References</h2>
+
+<p>[1] Goodfellow, I. J., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., &amp; Bengio, Y. (2014). Generative Adversarial Networks. ArXiv:1406.2661 [Cs, Stat]. http://arxiv.org/abs/1406.2661</p>
+
+<p>[2] Radford, A., Metz, L., &amp; Chintala, S. (2015). Unsupervised representation learning with deep convolutional generative adversarial networks. arXiv preprint arXiv:1511.06434.</p>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/2021/02/01/gan/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Mon, 01 Feb 2021 00:00:00 -0500</pubDate>
+                <author>Ziyue Yang</author>
+            </item>
+        
+    
   </channel>
 </rss>
