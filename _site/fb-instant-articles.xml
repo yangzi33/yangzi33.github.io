@@ -64,6 +64,10 @@
 
 <p>Then the competition will drive both groups to improve their methods until the counterfeits draw paintings that are not disguinshable from the actual paintings anymore.</p>
 
+<h2 id="example-showcase">Example Showcase</h2>
+
+<p><img src="/data/gan-example-1.gif" alt="Putin" /></p>
+
 <h2 id="related-work">Related work</h2>
 
 <p>The following image illustrates the DCGAN, one of the most popular generator network design, which performes multiple transposed convolutions to upsample \(\mathbf{z}\) to generate the data \(\mathbf{x}\) (here, an image).</p>
