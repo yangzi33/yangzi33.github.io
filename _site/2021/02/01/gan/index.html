@@ -4,11 +4,11 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Gentle Intro to the Generative Adversarial Networks (GANs) &#8211; Ziyue Yang</title>
+    <title>Generative Adversarial Networks &#8211; Ziyue Yang</title>
     <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Ziyue Yang's Personal Website">
+    <meta name="description" content="A gentle introduction to GANs">
     <meta name="robots" content="all">
     <meta name="author" content="Ziyue Yang">
     
@@ -17,7 +17,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for Ziyue Yang" href="/feed.xml" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202202011856" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202202012054" type="text/css">
 
     <!-- Fonts -->
     
@@ -51,7 +51,7 @@
     <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Gentle Intro to the Generative Adversarial Networks (GANs)">
+    <meta property="og:title" content="Generative Adversarial Networks">
     <meta property="og:description" content="Ziyue Yang's Personal Website">
     <meta property="og:url" content="http://localhost:4000/2021/02/01/gan/">
     <meta property="og:site_name" content="Ziyue Yang">
@@ -63,8 +63,8 @@
         <meta name="twitter:site" content="@yangzi33" />
         <meta name="twitter:creator" content="@yangzi33" />
     
-    <meta name="twitter:title" content="Gentle Intro to the Generative Adversarial Networks (GANs)" />
-    <meta name="twitter:description" content="Ziyue Yang's Personal Website" />
+    <meta name="twitter:title" content="Generative Adversarial Networks" />
+    <meta name="twitter:description" content="A gentle introduction to GANs" />
     <meta name="twitter:url" content="http://localhost:4000/2021/02/01/gan/" />
     
 
@@ -156,20 +156,41 @@
 
 
 <div class="post-header mb2">
-  <h1>Gentle Intro to the Generative Adversarial Networks (GANs)</h1>
+  <h1>Generative Adversarial Networks</h1>
   <span class="post-meta">Feb 1, 2021</span><br>
   
   <span class="post-meta small">
   
-    2 minute read
+    3 minute read
   
   </span>
 </div>
 
 <article class="post-content">
-  <h2 id="what-can-a-gan-do">What can a GAN do?</h2>
+  <p><strong>Note: Still updating..</strong></p>
 
 <p>GAN is about generating data from scratch, like an artist. The modern GAN usage would involve generating data, like composing a symphony, or drawing a landscape. Thousands of GAN research papers were published in recent years, with broad areas ranging from game development, medical imaging, text-to-image translation, etc.</p>
+
+<h2 id="some-preliminaries">Some Preliminaries</h2>
+
+<ul>
+  <li>Probabilistic Generative Models
+    <ul>
+      <li>e.g. MLE estimation for continuous input features</li>
+    </ul>
+  </li>
+  <li>Probabilistic Discriminative Models
+    <ul>
+      <li>e.g. multiclass logistic regression</li>
+    </ul>
+  </li>
+  <li>Neural Network Basics
+    <ul>
+      <li><a href="https://uoft-csc413.github.io/2022/assets/readings/L02a.pdf">Multilayer Perceptrons</a></li>
+      <li><a href="https://uoft-csc413.github.io/2022/assets/readings/L02b.pdf">Backpropagation</a></li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="how-do-the-adversarial-nets-work">How do the Adversarial Nets work?</h2>
 
@@ -200,7 +221,31 @@
 
 <p>If \(G\) and \(D\) are defined as <em>multilayer perceptrons</em>, we then are able to train the system using <em>backpropagation</em>.</p>
 
-<h2 id="too-much-math">Too Much Math…</h2>
+<h2 id="a-pedagogical-explanation">A Pedagogical Explanation</h2>
+
+<p><img src="/data/gan-dist.png" alt="gan-distribution" /></p>
+
+<p>This figure illustrate generative adverserial nets trained by simultaneously updating the discriminative distribution (\(D\), blue, dashed line), so that it discriminates between sampels from the data generating distribution \(p_{\mathbf{x}}\) (black, dotted line) from the generative distribution \(p_g(G)\) (green, solid line).</p>
+
+<ul>
+  <li>The lower horizontal line is the domain from which \(\mathbf{z}\) is sampled (uniformly, in this case);</li>
+  <li>The upper horizontal line is part of the domain of \(\mathbf{x}\);</li>
+  <li>The upward arrows show how the mapping \(\mathbf{x}=G(\mathbf{z})\) imposes the non-uniform distribution \(p_g\) on transformed samples.</li>
+  <li>\(G\) contracts in regions of high density, and expands in regions of low density of \(p_g\).</li>
+</ul>
+
+<p>a) Consider an adversarial pair near convergence: \(p_g\) is similar to \(p_{\text{data}}\), and \(D\) is a partially accurate classifier.</p>
+
+<p>b) In the inner loop of the algorithm, \(D\) is trained to discriminate samples from the data. It converges to</p>
+
+\[D^{*}(\mathbf{x})=\frac{p_{\text{data}}(\mathbf{x})}{p_{\text{data}}(\mathbf{x})+p_g(\mathbf{x})}\]
+
+<p>c) After an update to \(G\), the gradient of \(D\) has guided \(G(\mathbf{z})\) to flow to regions that are <strong>more likely to be classified</strong> as data.</p>
+
+<p>d) After a few steps of training, if \(G\) and \(D\) have enough capacity, they will reach a point where both cannot improve, since \(p_g=p_{\text{data}}\).
+    * At this stage, the discriminator is unable to differentiate between the two distributions, i.e. \(D(\mathbf{x})=1/2\).</p>
+
+<h2 id="an-analogy">An Analogy…</h2>
 
 <p>To view this in a analogous way, try to think in the following way:</p>
 
@@ -224,7 +269,14 @@
 
 <h2 id="related-work">Related work</h2>
 
-<p>The following image illustrates the DCGAN, one of the most popular generator network design, which performes multiple transposed convolutions to upsample \(\mathbf{z}\) to generate the data \(\mathbf{x}\) (here, an image).</p>
+<ul>
+  <li>
+    <p><a href="https://youtu.be/HGYYEUSm-0Q">Check out Ian Goodfellow’s tutorial workshop.</a></p>
+  </li>
+  <li>
+    <p>The following image illustrates the DCGAN (Radford et al.), one of the most popular generator network design, which performes multiple transposed convolutions to upsample \(\mathbf{z}\) to generate the data \(\mathbf{x}\) (here, an image).</p>
+  </li>
+</ul>
 
 <p><img src="https://miro.medium.com/max/1400/1*ULAGAYoGGr5eEB2377ArYA.png" alt="DCGAN" /></p>
 
@@ -242,15 +294,12 @@
   <div class="py2 post-footer">
   <img src="/data/thonk.png" alt="Ziyue Yang" class="avatar" />
   <p>
-    If you liked this post please checkout the rest of my <a href="http://localhost:4000/blog">blog</a>
+    If you liked this post, please checkout the rest of my <a href="http://localhost:4000/blog">blog,</a><br>
+    or get it touch with me!
   </p>
-</div>
-<div class="wrap">
-    <div class="measure">
-      <div class="clearfix"></div>
-      
+    
         <div class="social-icons">
-  <div class="social-icons-left" style="text-align: left;">
+  <div class="social-icons-left" style="text-align: center;">
     
       <a class="fa fa-twitter" href="https://twitter.com/yangzi33" target="_blank"></a>
     
@@ -285,9 +334,9 @@
 </div>
 <div class="clearfix"></div>
 
-      
-    </div>
-  </div>
+    
+</div>
+
 
 
 

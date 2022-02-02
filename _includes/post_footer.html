@@ -1,14 +1,11 @@
 <div class="py2 post-footer">
   <img src="{{ site.baseurl }}/data/thonk.png" alt="Ziyue Yang" class="avatar" />
   <p>
-    If you liked this post please checkout the rest of my <a href="{{ site.url}}/blog">blog</a>
+    If you liked this post, please checkout the rest of my <a href="{{ site.url}}/blog">blog,</a><br>
+    or get it touch with me!
   </p>
+    {% if site.show_social_icons %}
+        {% include social_links_center.html %}
+    {% endif %}
 </div>
-<div class="wrap">
-    <div class="measure">
-      <div class="clearfix"></div>
-      {% if site.show_social_icons %}
-        {% include social_links.html %}
-      {% endif %}
-    </div>
-  </div>
+
