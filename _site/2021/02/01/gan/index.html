@@ -17,7 +17,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for Ziyue Yang" href="/feed.xml" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202202012054" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202202020222" type="text/css">
 
     <!-- Fonts -->
     
@@ -225,7 +225,7 @@
 
 <p><img src="/data/gan-dist.png" alt="gan-distribution" /></p>
 
-<p>This figure illustrate generative adverserial nets trained by simultaneously updating the discriminative distribution (\(D\), blue, dashed line), so that it discriminates between sampels from the data generating distribution \(p_{\mathbf{x}}\) (black, dotted line) from the generative distribution \(p_g(G)\) (green, solid line).</p>
+<p>This figure illustrate generative adverserial nets trained by simultaneously updating the discriminative distribution (\(D\), blue, dashed line), so that it discriminates between samples from the data generating distribution \(p_{\mathbf{x}}\) (black, dotted line) from the generative distribution \(p_g(G)\) (green, solid line).</p>
 
 <ul>
   <li>The lower horizontal line is the domain from which \(\mathbf{z}\) is sampled (uniformly, in this case);</li>
@@ -242,8 +242,9 @@
 
 <p>c) After an update to \(G\), the gradient of \(D\) has guided \(G(\mathbf{z})\) to flow to regions that are <strong>more likely to be classified</strong> as data.</p>
 
-<p>d) After a few steps of training, if \(G\) and \(D\) have enough capacity, they will reach a point where both cannot improve, since \(p_g=p_{\text{data}}\).
-    * At this stage, the discriminator is unable to differentiate between the two distributions, i.e. \(D(\mathbf{x})=1/2\).</p>
+<p>d) After a few steps of training, if \(G\) and \(D\) have enough capacity, they will reach a point where both cannot improve, since \(p_g=p_{\text{data}}\).</p>
+
+<p>Note that At this stage, the discriminator is unable to differentiate between the two distributions, i.e. \(D(\mathbf{x})=1/2\).</p>
 
 <h2 id="an-analogy">An Analogy…</h2>
 
