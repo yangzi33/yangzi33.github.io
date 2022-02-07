@@ -16,7 +16,7 @@ The model is an architecture that defines the set of allowable hypotheses, usual
 
 * In the fashion of undergraduate statistics, we often interpret them as slope terms, denoted $$\beta_1,\dots,\beta_D$$.
 
-We will call these coefficients using an alternative name: **weights**, usually denoted by $w$'s; we will also have an intercept term, called **bias$$. Hence we can write the model mathematically as
+We will call these coefficients using an alternative name: **weights**, usually denoted by $w$'s; we will also have an intercept term, called **bias**. Hence we can write the model mathematically as
 
 $$ y = \sum_j w_j x_j+b.$$
 
@@ -24,7 +24,7 @@ $$ y = \sum_j w_j x_j+b.$$
 
 It is common to encounter cases where we have multiple linear fits, but how do decide which linear fits are "better" than the others?
 
-In order to quantify how *good* a fit is, we will define a **loss function** $$\mathcal{L}(y,t)$$ which assesses how far the predictions $y$ is from the target $t$. In the case of linear regression, we often use the **squared error** defined as
+In order to quantify how *good* a fit is, we will define a **loss function** $$\mathcal{L}(y,t)$$ which assesses how far the predictions $$y$$ is from the target $$t$$. In the case of linear regression, we often use the **squared error** defined as
 
 $$\mathcal{L}(y,t)=\frac{1}{2}(y-t)^2,$$
 
@@ -112,7 +112,9 @@ The weights are represented as a $$D$$-dimensional vector $$w$$, and the targets
 
 Therefore the predictions can be computed using a matrix-vector product
 
-$$\mathbf{y}=\mathbf{Xw}+b\mathbf{1}$$.
+$$
+\mathbf{y}=\mathbf{Xw}+b\mathbf{1}.
+$$
 
 As well as the cost function:
 
@@ -123,5 +125,5 @@ $$
 Additionally, we can vectorize the gradient descent update (for linear regression) as
 
 $$
-\mathbf{w}\leftarrow\mathbf{w}-\alpha\frac{1}{N}\mathbf{X}^T(\mathbf{y-t})
+\mathbf{w}\leftarrow\mathbf{w}-\alpha\frac{1}{N}\mathbf{X}^T(\mathbf{y-t}).
 $$
