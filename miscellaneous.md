@@ -17,7 +17,7 @@ I add random stuff to this page whenever I feel like it, for you to know more ab
 
 - Huge fan of [Formula 1®](https://www.youtube.com/user/Formula1), as well as other motorsport championships such as the GT series.
 
-- I speak English, Mandarin, and Cantonese. I am currently learning Japanese and Russian.
+- I speak English, Mandarin, and Cantonese. I am currently learning Japanese.
 
 - [How to pronounce my name](https://www.name-coach.com/ziyue-yang-6de7fde3-3026-4cd1-acfa-5b7c30cc036e?share_trigger=true): similar to "zee", "you" in English.
 
