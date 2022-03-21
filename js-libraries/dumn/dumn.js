@@ -10,8 +10,6 @@ function LayerGenerator() {
     this.layer = [];
 }
 
-
-
 NeuronGenerator.prototype = {
     makeNeuron: function(numNeurons) {
         const neuron = document.createElement("div");
