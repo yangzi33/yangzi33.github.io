@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2021/02/01/gan/</loc>
-<lastmod>2021-02-01T00:00:00-05:00</lastmod>
+<loc>http://localhost:4000/2022/02/01/gan/</loc>
+<lastmod>2022-02-01T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/coursework/</loc>
@@ -20,12 +20,28 @@
 <loc>http://localhost:4000/resume/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/cv.pdf</loc>
+<lastmod>2022-05-17T03:37:06-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/data/projects/flgan/flgan.pdf</loc>
+<lastmod>2022-05-15T06:23:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/data/projects/gan-vb/gan-vb.pdf</loc>
+<lastmod>2022-05-14T15:59:56-04:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/data/projects/kmeans/vignette.pdf</loc>
 <lastmod>2020-12-31T20:16:41-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/data/projects/mrp/Predicting_Voting_Behavior_in_Canadian_Elections.pdf</loc>
 <lastmod>2021-06-17T20:22:43-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/js-libraries/dumn/</loc>
+<lastmod>2022-03-20T21:56:50-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/sta492/sta492-w1.html</loc>

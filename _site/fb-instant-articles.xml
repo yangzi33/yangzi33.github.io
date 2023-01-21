@@ -10,7 +10,7 @@
         
             <item>
                 <title>Generative Adversarial Networks</title>
-                <link>http://localhost:4000/2021/02/01/gan/</link>
+                <link>http://localhost:4000/2022/02/01/gan/</link>
                 <content:encoded>
                     <![CDATA[
                     <p><strong>Note: Still updating..</strong></p>
@@ -38,7 +38,7 @@
   </li>
 </ul>
 
-<h2 id="how-do-the-adversarial-nets-work">How do the Adversarial Nets work?</h2>
+<h2 id="how-do-the-adversarial-nets-work">How Do the Adversarial Nets work?</h2>
 
 <p>The GAN provides a framework for <strong>estimating generative models</strong> through an <strong>adversarial</strong> process. In this framework we train the following two models simultaneously:</p>
 
@@ -135,13 +135,13 @@
 
                     ]]>
                 </content:encoded>
-                <guid isPermaLink="false">/2021/02/01/gan/</guid>
+                <guid isPermaLink="false">/2022/02/01/gan/</guid>
                 <description>
                     
                     A gentle introduction to GANs
                     
                 </description>
-                <pubDate>Mon, 01 Feb 2021 00:00:00 -0500</pubDate>
+                <pubDate>Tue, 01 Feb 2022 00:00:00 -0500</pubDate>
                 <author>Ziyue Yang</author>
             </item>
         
