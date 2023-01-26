@@ -4,163 +4,178 @@ layout: default
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+  $(document).ready(function () {
+    // Add smooth scrolling to all links
+    $("a").on("click", function (event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+        // Store hash
+        var hash = this.hash;
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          800,
+          function () {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          }
+        );
+      } // End if
+    });
   });
-});
 </script>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tr>
+    <article class="post-content">
+      <td valign="left" width="30%">
+        <img
+          src="{{ site.baseurl }}/data/profile.jpg"
+          alt="Ziyue Yang"
+          style="width: 10rem; border-radius: 10%; margin-left: 5px"
+        />
 
-<tr>
-  <article class="post-content">
+        <header class="post-header">
+          <h1
+            style="
+              font-size: 1.8rem;
+              margin-top: 0;
+              margin-bottom: 0;
+              margin-left: 15px;
+            "
+          >
+            Ziyue Yang
+          </h1>
+        </header>
 
-  <td valign="left" width="30%">
-      <img src="{{ site.baseurl }}/data/profile.jpg"
-        alt="Ziyue Yang"
-        style="
-          width: 10rem;
-          border-radius: 10%;
-          margin-left: 5px;
-        "/>
+        <header class="site-header px2 px-responsive">
+          <div class="wrap">
+            <div class="measure">
+              <div class="clearfix"></div>
+              {% if site.show_social_icons %} {% include social_links.html %} {%
+              endif %}
+            </div>
+          </div>
+        </header>
+      </td>
 
-    <header class="post-header">
-      <h1 style="font-size: 1.8rem; margin-top: 0; margin-bottom: 0; margin-left: 15px;">
-                  Ziyue Yang</h1>
-    </header>
+      <td valign="top" width="70%">
+        <p>
+          I'm a fourth-year undergraduate student at the University of Toronto,
+          pursuing a degree in Statistics, Computer Science, and Mathematics. My
+          interests intersect with software engineering and machine learning.
+          <br /><br />
+          I recently worked as a developer at Centivizer under the MIE
+          Interactive Media Lab at UofT. Previously, I interned as a
+          cross-platform mobile developer under <i>KWG Group Holdings</i> at the
+          <i>Cohesion</i> group, where I majorly worked with React Native
+          development. I led a workshop at <i>Bigtheta</i>, demonstrated
+          software design principles and built web applications. <br /><br />
+          I constantly seek opportunities, looking forward to making positive
+          impacts and gaining valuable experience from the industry, while
+          maintaining a healthy work-life balance.
 
-    <header class="site-header px2 px-responsive">
-      <div class="wrap">
-        <div class="measure">
-          <div class="clearfix"></div>
-          {% if site.show_social_icons %}
-            {% include social_links.html %}
-          {% endif %}
-        </div>
-      </div>
-    </header>
-  </td>
-
-  <td valign="top" width="70%">
-    <p>
-    I'm a fourth-year undergraduate student at the University of Toronto, pursuing a degree in
-    Statistics, Computer Science, and Mathematics. My interests intersect software engineering, machine
-    learning, and data science.
-        <br><br>
-    Previously, I interned as an iOS developer under <i>KWG Group Holdings</i> at the <i>Cohesion</i> group, where I majorly worked with React Native developing an cross-platform mobile app that runs on both iOS and Android. I led a workshop at <i>Bigtheta</i>, demonstrated software design principles and built web applications. I was involved in the LearnAI program at UofTAI during the academic year 2020/21.
-    <br><br>
-    I constantly seek opportunities, looking forward to making positive impacts and gaining valuable experience from the industry, while maintaining a healthy work-life balance. 
-
-    <br><br>
-
-    </p>
-  </td>
-
-  </article>
-</tr>
-
+          <br /><br />
+        </p>
+      </td>
+    </article>
+  </tr>
 </table>
 
-<br><br>
-
+<br /><br />
 
 <div id="projects" class="post">
-    <article class="post-content">
-        <header class="post-header">
-          <h1 style="font-size: 2rem; margin-top: 0; margin-bottom: 0">Portfolio</h1>
-        </header>
-    </article>
+  <article class="post-content">
+    <header class="post-header">
+      <h1 style="font-size: 2rem; margin-top: 0; margin-bottom: 0">
+        Portfolio
+      </h1>
+    </header>
+  </article>
 </div>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/flgan/flgan.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>FLGAN</h3>
+      <p>
+        We propose Focal Loss Generative Adversarial Network (FLGAN), an
+        improved DCGAN with focal loss to speed up the training process and
+        advance model performance.
+      </p>
+      <p>
+        <a href="{{ site.base_url }}/data/projects/flgan/flgan.pdf">paper</a> |
+        <a href="https://github.com/yangzi33/flgan">code</a>
+      </p>
+    </td>
+  </tr>
 
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/flgan/flgan.png">
-  </td>
-  <td valign="top" width="80%">
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/maze.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>Optimal Pathfinder with Reinforcement Learning</h3>
+      <p>
+        Software that discovers the optimal (shortest) path to a goal in a
+        simulated maze environment. We implemented a Q learning algorithm that
+        selects moves for the reinforcement learning agent. Exploration
+        strategies include epsilon-greedy and the Boltzmann Stochastic Policy
+        derived from the softmax of Q-values.
+      </p>
+      <p>
+        <a href="https://github.com/yangzi33/qlearning-maze-solver">code</a>
+      </p>
+    </td>
+  </tr>
 
-  <h3>FLGAN</h3>
-    <p>
-     We propose Focal Loss Generative Adversarial Network (FLGAN), an improved DCGAN with focal loss to speed up the training process and advance model performance. 
-    </p>
-    <p>
-      <a href="{{ site.base_url }}/data/projects/flgan/flgan.pdf">paper</a> | <a href="https://github.com/yangzi33/flgan">code</a>
-    </p>
-  </td>
-</tr>
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/dumn.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>DUMN: Graph Generating API</h3>
+      <p>
+        An interactive JavaScript canvas API for generating graph vertices and
+        edges.
+      </p>
+      <p>
+        <a href="https://dumn.herokuapp.com">demo</a> |
+        <a href="https://dumn.herokuapp.com/pages/docs/index.html">docs</a> |
+        <a href="https://github.com/yangzi33/dumn">code</a>
+      </p>
+    </td>
+  </tr>
 
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/maze.png">
-  </td>
-  <td valign="top" width="80%">
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/microblog-logo.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>Microblog</h3>
+      <p>
+        A microblogging web application written in Python and Flask, modified
+        from the app that I originally built for
+        <a href="https://sigmahacks.org/">SigmaHacks 3</a>. Microblog has email
+        support, user-following features, and I18n & L10n support.
+      </p>
+      <p>
+        <a href="https://github.com/yangzi33/microblog">code</a>
+      </p>
+    </td>
+  </tr>
 
-  <h3>Optimal Pathfinder with Reinforcement Learning</h3>
-    <p>
-      Software that discovers the optimal (shortest) path to a goal in a simulated maze environment. We implemented a Q learning algorithm that selects moves for the reinforcement learning agent. Exploration strategies include epsilon-greedy and the Boltzmann Stochastic Policy derived from the softmax of Q-values.
-    </p>
-    <p>
-      <a href="https://github.com/yangzi33/qlearning-maze-solver">code</a>
-    </p>
-  </td>
-</tr>
-
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/dumn.png">
-  </td>
-  <td valign="top" width="80%">
-
-  <h3>DUMN: Graph Generating API</h3>
-    <p>
-      An interactive JavaScript canvas API for generating graph vertices and edges.
-    </p>
-    <p>
-      <a href="https://dumn.herokuapp.com">demo</a> | 
-      <a href="https://dumn.herokuapp.com/pages/docs/index.html">docs</a> | 
-      <a href="https://github.com/yangzi33/dumn">code</a>
-    </p>
-  </td>
-</tr>
-
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/microblog-logo.png">
-  </td>
-  <td valign="top" width="80%">
-
-  <h3>Microblog</h3>
-    <p>
-     A microblogging web application written in Python and Flask, modified from the app that I originally built for <a href="https://sigmahacks.org/">SigmaHacks 3</a>. Microblog has email support, user-following features, and I18n & L10n support.
-    </p>
-    <p>
-      <a href="https://github.com/yangzi33/microblog">code</a>
-    </p>
-  </td>
-</tr>
-
-<!-- <tr>
+  <!-- <tr>
   <td valign="middle" width="20%">
       <img src="{{ site.base_url }}/data/projects/maze.png">
   </td>
@@ -176,185 +191,215 @@ $(document).ready(function(){
   </td>
 </tr> -->
 
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/face.png">
-  </td>
-  <td valign="top" width="80%">
-
-  <h3>Neural Network for Facial Expression Classification</h3>
-    <p>
-      Fully-connected neural networks trained on a subset of <it>Toronto Faces Dataset</it>. We implemented the neural network from scratch and trained it by tuning a set of hyperparameters, and we modified the model architecture for better generalization. The model achieved an excellent testing accuracy of 71.69%.
-    </p>
-    <p>
-      <a href="https://github.com/yangzi33/face-nn">code</a>
-    </p>
-  </td>
-</tr>
-
-<tr>
+  <tr>
     <td valign="middle" width="20%">
-        <img src="{{ site.base_url }}/data/projects/agenda/agenda.png">
+      <img src="{{ site.base_url }}/data/projects/face.png" />
     </td>
     <td valign="top" width="80%">
-  
-      <h3>Agenda</h3>
+      <h3>Neural Network for Facial Expression Classification</h3>
       <p>
-        Android calendar app that allows event creation for multiple users. Features include searching events by names, creating events based on given frequencies, and tagging events. I majorly designed and implemented the Android GUI. I also programmed SQLite database helper to query user data. This app was developed in Winter 2020 in my software design course.
+        Fully-connected neural networks trained on a subset of
+        <it>Toronto Faces Dataset</it>. We implemented the neural network from
+        scratch and trained it by tuning a set of hyperparameters, and we
+        modified the model architecture for better generalization. The model
+        achieved an excellent testing accuracy of 71.69%.
       </p>
-      <br>
       <p>
-        <b>Ziyue Yang</b>, Yunlong Chen, Xi Zheng, Juliana Chu, Yeuk Lam Ng, Jiajun Chen
-      </p>
-      <p>
-          <a href="https://github.com/yangzi33/agenda">code</a>
+        <a href="https://github.com/yangzi33/face-nn">code</a>
       </p>
     </td>
   </tr>
 
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/mnist.png">
-  </td>
-  <td valign="top" width="80%">
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/agenda/agenda.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>Agenda</h3>
+      <p>
+        Android calendar app that allows event creation for multiple users.
+        Features include searching events by names, creating events based on
+        given frequencies, and tagging events. I majorly designed and
+        implemented the Android GUI. I also programmed SQLite database helper to
+        query user data. This app was developed in Winter 2020 in my software
+        design course.
+      </p>
+      <br />
+      <p>
+        <b>Ziyue Yang</b>, Yunlong Chen, Xi Zheng, Juliana Chu, Yeuk Lam Ng,
+        Jiajun Chen
+      </p>
+      <p>
+        <a href="https://github.com/yangzi33/agenda">code</a>
+      </p>
+    </td>
+  </tr>
 
-  <h3><sup></sup>ConvNet for Digit Recognition</h3>
-    <p>
-      Sequential Convolutional Neural Network for digit recognition. The network has 5 layers and is trained on the <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> dataset. We built this ConvNet using the Keras API.
-    </p>
-    <p>
-    <a href="https://github.com/yangzi33/mnist-classifier/blob/master/keras_CNN.ipynb">Notebook</a> | <a href="https://github.com/yangzi33/mnist-classifier">code</a>
-    </p>
-  </td>
-</tr>
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/mnist.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3><sup></sup>ConvNet for Digit Recognition</h3>
+      <p>
+        Sequential Convolutional Neural Network for digit recognition. The
+        network has 5 layers and is trained on the
+        <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> dataset. We built
+        this ConvNet using the Keras API.
+      </p>
+      <p>
+        <a
+          href="https://github.com/yangzi33/mnist-classifier/blob/master/keras_CNN.ipynb"
+          >Notebook</a
+        >
+        | <a href="https://github.com/yangzi33/mnist-classifier">code</a>
+      </p>
+    </td>
+  </tr>
 
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/mrp/mrp.jpeg">
-  </td>
-  <td valign="top" width="80%">
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/mrp/mrp.jpeg" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>Predicting Voting Behavior in Canadian Elections</h3>
+      <p></p>
+      <p>Mohammad Ettouhami, Sanjam Sigdel, <b>Ziyue Yang</b></p>
+      <p>
+        <a
+          href="{{ site.base_url }}/data/projects/mrp/Predicting_Voting_Behavior_in_Canadian_Elections.pdf"
+        ></a>
+      </p>
+    </td>
+  </tr>
 
-  <h3>Predicting Voting Behavior in Canadian Elections</h3>
-    <p>
-    </p>
-    <p>Mohammad Ettouhami, Sanjam Sigdel, <b>Ziyue Yang</b></p>
-    <p>
-      <a href="{{ site.base_url }}/data/projects/mrp/Predicting_Voting_Behavior_in_Canadian_Elections.pdf"></a>
-    </p>
-  </td>
-</tr>
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/tsla.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>
+        Time Series Analysis: Forecasting TSLA Stock Price using Autoregressive
+        Integrated Moving Average Model
+      </h3>
+      <p>
+        We make predictions of Tesla's stock price using ARIMA model. We turned
+        the stock data stationary, performed time series analysis and made
+        forecasting. ARIMA is one of the most popular models to predict linear
+        time series data.
+      </p>
+      <p>
+        <a
+          href="https://www.kaggle.com/yangzi33/forecasting-tesla-stock-price-time-series-analysis?scriptVersionId=54688162https://www.kaggle.com/yangzi33/forecasting-tesla-stock-price-time-series-analysis?scriptVersionId=54688162"
+          >Notebook</a
+        >
+      </p>
+    </td>
+  </tr>
 
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/tsla.png">
-  </td>
-  <td valign="top" width="80%">
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/sentence-cnn.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>
+        <sup>§</sup>Sentence Classification using Convolutional Neural Networks
+      </h3>
+      <p></p>
+      <p>
+        <a href="https://github.com/yangzi33/sentence-cnn">code</a>
+      </p>
+    </td>
+  </tr>
 
-  <h3>Time Series Analysis: Forecasting TSLA Stock Price using Autoregressive Integrated Moving Average Model</h3>
-    <p>
-      We make predictions of Tesla's stock price using ARIMA model. We turned the stock data stationary, performed time series analysis and made forecasting. ARIMA is one of the most popular models to predict linear time series data.
-    </p>
-    <p>
-      <a href="https://www.kaggle.com/yangzi33/forecasting-tesla-stock-price-time-series-analysis?scriptVersionId=54688162https://www.kaggle.com/yangzi33/forecasting-tesla-stock-price-time-series-analysis?scriptVersionId=54688162">Notebook</a>
-    </p>
-  </td>
-</tr>
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/irls/irls.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>PIRLS</h3>
+      <p>
+        Model built using <i>parsnip</i> engine that computes the logistic Lasso
+        using coordinate descent on the penalized iteratively reweighted least
+        squares algorithm.
+      </p>
+      <p><a href="https://github.com/yangzi33/pirls">code</a> | vignette</p>
+    </td>
+  </tr>
 
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/sentence-cnn.png">
-  </td>
-  <td valign="top" width="80%">
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/kmeans/warhol-stitch.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>Image Stitcher</h3>
+      <p>
+        I implemented functions in a package that takes image inputs and
+        transform them into <i>cross-stitch</i> patterns. The package uses
+        K-means algorithm to cluster images into a chosen number of groups based
+        on the RGB information. Helper methods on choosing the ideal number of
+        clusters are provided.
+      </p>
+      <p>
+        <a href="https://github.com/yangzi33/mnist-classifier">code</a> |
+        <a href="{{ site.base_url }}/data/projects/kmeans/vignette.pdf"
+          >vignette</a
+        >
+      </p>
+    </td>
+  </tr>
 
-  <h3><sup>§</sup>Sentence Classification using Convolutional Neural Networks</h3>
-    <p>
-    </p>
-    <p>
-      <a href="https://github.com/yangzi33/sentence-cnn">code</a>
-    </p>
-  </td>
-</tr>
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.base_url }}/data/projects/rest-transparent.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>UniMart</h3>
+      <p>App to practice Django usage.</p>
+      <p><a href="https://github.com/yangzi33/unimart/">code</a> | demo</p>
+      <p>
+        <b>Ziyue Yang</b>
+      </p>
+    </td>
+  </tr>
 
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/irls/irls.png">
-  </td>
-  <td valign="top" width="80%">
-
-    <h3>PIRLS</h3>
-    <p>
-      Model built using <i>parsnip</i> engine that computes the logistic Lasso using coordinate descent on the penalized iteratively reweighted least squares algorithm.
-    </p>
-    <p>
-      <a href="https://github.com/yangzi33/pirls">code</a> | vignette
-    </p>
-  </td>
-</tr>
-
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/kmeans/warhol-stitch.png">
-  </td>
-  <td valign="top" width="80%">
-
-    <h3>Image Stitcher</h3>
-    <p>
-      I implemented functions in a package that takes image inputs and transform them into <i>cross-stitch</i> patterns. The package uses K-means algorithm to cluster images into a chosen number of groups based on the RGB information. Helper methods on choosing the ideal number of clusters are provided.
-    </p>
-    <p>
-      <a href="https://github.com/yangzi33/mnist-classifier">code</a> | <a href="{{ site.base_url }}/data/projects/kmeans/vignette.pdf">vignette</a>
-    </p>
-  </td>
-</tr>
-
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.base_url }}/data/projects/rest-transparent.png">
-  </td>
-  <td valign="top" width="80%">
-
-    <h3>UniMart</h3>
-    <p>App to practice Django usage.</p>
-    <p>
-        <a href="https://github.com/yangzi33/unimart/">code</a> | demo
-    </p>
-    <p>
-      <b>Ziyue Yang</b>
-    </p>
-  </td>
-</tr>
-
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.baseurl }}/data/projects/fpv.png">
-  </td>
-  <td valign="top" width="80%">
-
-    <h3>FPV Navigator</h3>
-    <p>
-     First-person view navigator implemented in C++ inspired by <a href="{{ site.baseurl }}/data/projects/ray-casting.gif">the ray casting algorithm from Wolfenstein 3D</a>. The algorithm takes an input of 2-dimensional maps made up of blocks and spaces, and renders 3D spaces based on the maps. This navigator allows player to "walk around" in the command line-rendered space. This project uses some fundamental knowledge of linear algebra in 3D space.
-    </p>
-    <p>
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.baseurl }}/data/projects/fpv.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>FPV Navigator</h3>
+      <p>
+        First-person view navigator implemented in C++ inspired by
+        <a href="{{ site.baseurl }}/data/projects/ray-casting.gif"
+          >the ray casting algorithm from Wolfenstein 3D</a
+        >. The algorithm takes an input of 2-dimensional maps made up of blocks
+        and spaces, and renders 3D spaces based on the maps. This navigator
+        allows player to "walk around" in the command line-rendered space. This
+        project uses some fundamental knowledge of linear algebra in 3D space.
+      </p>
+      <p>
         <a href="https://github.com/yangzi33/ConsoleFPV">code</a>
-    </p>
-  </td>
-</tr>
+      </p>
+    </td>
+  </tr>
 
-<tr>
-  <td valign="middle" width="20%">
-      <img src="{{ site.baseurl }}/data/projects/treemap.png">
-  </td>
-  <td valign="top" width="80%">
-
-    <h3>Treemap</h3>
-    <p><a href="https://github.com/yangzi33/Treemap-Visualizer/">code</a> | descriptions</p>
-    <p>Yizhou Hu<sup>∇</sup>, <b>Ziyue Yang</b><sup>∇</sup></p>
-  </td>
-</tr>
-
+  <tr>
+    <td valign="middle" width="20%">
+      <img src="{{ site.baseurl }}/data/projects/treemap.png" />
+    </td>
+    <td valign="top" width="80%">
+      <h3>Treemap</h3>
+      <p>
+        <a href="https://github.com/yangzi33/Treemap-Visualizer/">code</a> |
+        descriptions
+      </p>
+      <p>Yizhou Hu<sup>∇</sup>, <b>Ziyue Yang</b><sup>∇</sup></p>
+    </td>
+  </tr>
 </table>
 
 <p>
-  <sup>∇</sup>: equal contributions<br>
-  <sup>§</sup>: ongoing<br>
+  <sup>∇</sup>: equal contributions<br />
+  <sup>§</sup>: ongoing<br />
 </p>
