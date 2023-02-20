@@ -20,6 +20,9 @@
 <loc>http://localhost:4000/resume/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/teaching/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/cv.pdf</loc>
 <lastmod>2022-05-17T03:37:06-04:00</lastmod>
 </url>
