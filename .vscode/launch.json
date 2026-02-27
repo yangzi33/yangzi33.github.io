@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Jekyll Serve",
+            "type": "ruby-lsp",
+            "request": "launch",
+            "program": "jekyll",
+            "args": [
+                "serve",
+                "--incremental",
+                "--livereload"
+            ],
+            "useBundler": true,
+            "cwd": "${workspaceRoot}"
+        }
+    ]
+}
