@@ -18,7 +18,7 @@ Every time the agent observes the environment ($o_t$) and "reflects" on its prog
 
 $$z_{t+1} = R(z_t, o_t; \theta)$$
 
-The burning question for any ICML-bound researcher is: **Does this sequence $\{z_t\}$ converge?** Or is the agent just spiraling into a "hallucination sink"?
+The burning question is: **Does this sequence $\{z_t\}$ converge?** Or is the agent just spiraling into a "hallucination sink"?
 
 ---
 
@@ -30,7 +30,7 @@ In metric space terms, if we have two different potential plans $z_a$ and $z_b$,
 
 $$d(R(z_a, o;\theta), R(z_b, o;\theta)) \leq k \cdot d(z_a, z_b)$$
 
-When this condition is met on a complete metric space, the **Banach Fixed-Point Theorem** guarantees that the sequence $\{z_t\}$ converges to a unique fixed point $z^*$—regardless of the initial state. Note that this only guarantees *convergence*, not correctness: the fixed point is a stable plan, but whether it’s a *good* plan depends on whether $R$ was designed to drive the agent toward the actual goal. If $k = 1$ the map is non-expansive and convergence is no longer guaranteed; if $k > 1$ the plans can actively diverge, producing the "overthinking into nonsense" failure mode we see in unoptimized agentic loops.
+When this condition is met on a complete metric space, the **Banach Fixed-Point Theorem** guarantees that the sequence $\{z_t\}$ converges to a unique fixed point $z^{\ast}$—regardless of the initial state. Here $z^{\ast}$ is the latent representation of a *goal-satisfying plan*: the state where the agent has nothing left to revise, i.e., $R(z^{\ast}, o; \theta) = z^{\ast}$. Crucially, this only guarantees *convergence to* $z^{\ast}$, not that $z^{\ast}$ is correct—whether the fixed point actually represents a good plan is a design requirement on $R$, not a consequence of the theorem. If $k = 1$ the map is non-expansive and convergence is no longer guaranteed; if $k > 1$ the plans can actively diverge, producing the "overthinking into nonsense" failure mode we see in unoptimized agentic loops.
 
 
 
@@ -40,7 +40,7 @@ When this condition is met on a complete metric space, the **Banach Fixed-Point 
 
 How do we prove an agent won't diverge? We can borrow a page from classical control theory and define a **Lyapunov Function** $V(z)$, which acts as an "energy" or "error" metric. 
 
-For a stable agent, $V$ must satisfy two conditions: it must be non-negative and zero only at the goal state ($V(z) \geq 0$, $V(z^*) = 0$), and each step of reflection must decrease it in expectation:
+For a stable agent, $V$ must satisfy two conditions: it must be non-negative and zero only at $z^{\ast}$ — the goal-satisfying fixed point defined above ($V(z) \geq 0$, $V(z^{\ast}) = 0$) — and each step of reflection must decrease it in expectation:
 
 $$\mathbb{E}[V(z_{t+1}) - V(z_t) \mid z_t] < 0$$
 

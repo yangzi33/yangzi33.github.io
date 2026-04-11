@@ -17,13 +17,12 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for Ziyue Yang" href="/feed.xml" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202604110332" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202604110406" type="text/css">
 
     <!-- Fonts -->
-    
-    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,900;1,300;1,900&family=Lato:wght@300;900&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
       <link href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" rel="stylesheet">
@@ -105,7 +104,7 @@
     
 </head>
 
-<body class="site">
+<body class="site layout-post">
   
 	
 
@@ -186,7 +185,7 @@
 
 \[z_{t+1} = R(z_t, o_t; \theta)\]
 
-<p>The burning question for any ICML-bound researcher is: <strong>Does this sequence ${z_t}$ converge?</strong> Or is the agent just spiraling into a “hallucination sink”?</p>
+<p>The burning question is: <strong>Does this sequence ${z_t}$ converge?</strong> Or is the agent just spiraling into a “hallucination sink”?</p>
 
 <hr />
 
@@ -198,7 +197,7 @@
 
 \[d(R(z_a, o;\theta), R(z_b, o;\theta)) \leq k \cdot d(z_a, z_b)\]
 
-<p>When this condition is met on a complete metric space, the <strong>Banach Fixed-Point Theorem</strong> guarantees that the sequence ${z_t}$ converges to a unique fixed point $z^<em>$—regardless of the initial state. Note that this only guarantees *convergence</em>, not correctness: the fixed point is a stable plan, but whether it’s a <em>good</em> plan depends on whether $R$ was designed to drive the agent toward the actual goal. If $k = 1$ the map is non-expansive and convergence is no longer guaranteed; if $k &gt; 1$ the plans can actively diverge, producing the “overthinking into nonsense” failure mode we see in unoptimized agentic loops.</p>
+<p>When this condition is met on a complete metric space, the <strong>Banach Fixed-Point Theorem</strong> guarantees that the sequence ${z_t}$ converges to a unique fixed point $z^{\ast}$—regardless of the initial state. Here $z^{\ast}$ is the latent representation of a <em>goal-satisfying plan</em>: the state where the agent has nothing left to revise, i.e., $R(z^{\ast}, o; \theta) = z^{\ast}$. Crucially, this only guarantees <em>convergence to</em> $z^{\ast}$, not that $z^{\ast}$ is correct—whether the fixed point actually represents a good plan is a design requirement on $R$, not a consequence of the theorem. If $k = 1$ the map is non-expansive and convergence is no longer guaranteed; if $k &gt; 1$ the plans can actively diverge, producing the “overthinking into nonsense” failure mode we see in unoptimized agentic loops.</p>
 
 <hr />
 
@@ -206,7 +205,7 @@
 
 <p>How do we prove an agent won’t diverge? We can borrow a page from classical control theory and define a <strong>Lyapunov Function</strong> $V(z)$, which acts as an “energy” or “error” metric.</p>
 
-<p>For a stable agent, $V$ must satisfy two conditions: it must be non-negative and zero only at the goal state ($V(z) \geq 0$, $V(z^*) = 0$), and each step of reflection must decrease it in expectation:</p>
+<p>For a stable agent, $V$ must satisfy two conditions: it must be non-negative and zero only at $z^{\ast}$ — the goal-satisfying fixed point defined above ($V(z) \geq 0$, $V(z^{\ast}) = 0$) — and each step of reflection must decrease it in expectation:</p>
 
 \[\mathbb{E}[V(z_{t+1}) - V(z_t) \mid z_t] &lt; 0\]
 

@@ -22,3 +22,48 @@ sup {
   vertical-align: middle;
   top: -0.9ex;
 }
+
+// Academic typography — blog posts only
+.layout-post {
+  .post-content,
+  .post-header {
+    font-family: 'STIX Two Text', Georgia, serif;
+
+    p {
+      font-family: 'STIX Two Text', Georgia, serif;
+      line-height: 1.75;
+      margin-bottom: 1.2em;
+      color: #1a1a1a;
+    }
+
+    strong, b { font-weight: 500; }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'STIX Two Text', Georgia, serif;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.4rem;
+    }
+
+    h1 { font-size: 2rem;   letter-spacing: -0.025em; margin-top: 2.5rem; }
+    h2 { font-size: 1.5rem; letter-spacing: -0.02em;  margin-top: 2rem; }
+    h3 { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.01em; margin-top: 1.75rem; }
+    h4 { font-size: 1.05rem; font-weight: 500; margin-top: 1.5rem; }
+    h5 { font-size: 0.9rem;  font-weight: 500; margin-top: 1.25rem; }
+    h6 { font-size: 0.8rem;  font-weight: 400; margin-top: 1rem; color: #666; }
+
+    code, pre {
+      font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+      font-size: 0.875rem;
+    }
+
+    blockquote {
+      border-left: 2px solid #ccc;
+      font-style: italic;
+      color: #666;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0.2rem 0 0.2rem 1.25rem;
+    }
+  }
+}
