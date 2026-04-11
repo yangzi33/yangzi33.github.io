@@ -20,17 +20,17 @@ tags: coursework
 
 ## Essential Courses...
 
-...that I have taken/am currently taking<sup>†</sup> at the University of Toronto.
+...that I have taken at the University of Toronto.
 
 <sup>‡</sup>: graduate level.
 
 
 ### Compute Science
 
-- <sup>†‡</sup>[CSC413/2516](https://uoft-csc413.github.io/2022/): Neural Networks and Deep Learning ([*Jimmy Ba*](http://jimmylba.github.io/), [*Bo Wang*](https://vectorinstitute.ai/team/bo-wang/))
-- <sup>†</sup>CSC369: Operating Systems ([*Karen Reid*](https://www.cs.toronto.edu/~reid/))
+- <sup>‡</sup>[CSC413/2516](https://uoft-csc413.github.io/2022/): Neural Networks and Deep Learning ([*Jimmy Ba*](http://jimmylba.github.io/), [*Bo Wang*](https://vectorinstitute.ai/team/bo-wang/))
+- CSC369: Operating Systems ([*Karen Reid*](https://www.cs.toronto.edu/~reid/))
 - CSC343: Introduction to Databases ([*Diane Horton*](https://www.cs.toronto.edu/~dianeh/))
-- <sup>†</sup>CSC309: Programming on the Web (*Mark Kazakevich*)
+- CSC309: Programming on the Web (*Mark Kazakevich*)
 - CSC265: Enriched Data Structures and Analysis ([*Faith Ellen*](http://www.cs.toronto.edu/~faith/))
 	<!-- - The most difficult course I've ever taken. Advanced data structures (e.g. leaf-oriented non-blocking binary search trees) are covered with in-depth details. Topics include randomized algorithms, amortized analysis, heaps, graph representations, and minimum spanning trees. -->
 - CSC258: Computer Organization ([*Rabia Bakhteri*](http://www.cs.toronto.edu/~rbakhteri/))
@@ -40,8 +40,9 @@ tags: coursework
 
 ### Statistics
 
-- <sup>†</sup>STA492: Seminar in Statistical Science (Deep Learning Research) ([*David Brenner*](https://www.statistics.utoronto.ca/people/directories/all-faculty/david-brenner))
-- <sup>†</sup>STA490: Statistical Consultation, Communication, and Collaboration ([*Liza Bolton*](https://www.statistics.utoronto.ca/people/directories/all-faculty/liza-bolton), [*Michael Moon*](https://www.statistics.utoronto.ca/people/directories/graduate-students/michael-jongho-moon))
+- STA492: Seminar in Statistical Science (Deep Learning Research) ([*David Brenner*](https://www.statistics.utoronto.ca/people/directories/all-faculty/david-brenner))
+- STA490: Statistical Consultation, Communication, and Collaboration ([*Liza Bolton*](https://www.statistics.utoronto.ca/people/directories/all-faculty/liza-bolton), [*Michael Moon*](https://www.statistics.utoronto.ca/people/directories/graduate-students/michael-jongho-moon))
+- <sup>‡</sup>STA457: Time Series Analysis ([*Esam Mahdi*](https://esammahdi.com/))
 - <sup>‡</sup>STA414/2104: Probabilistic Machine Learning ([*Murat Erdogdu*](http://www.cs.toronto.edu/~erdogdu/))
 	<!-- - Topics include naive Bayes, stochastic variational inference, Marko chain Monte Carlo, and GANs. -->
 - STA355: Theory of Statistical Practice ([*Keith Knight*](http://www.utstat.utoronto.ca/keith/home.html))
@@ -55,7 +56,8 @@ tags: coursework
 
 ### Mathematics
 - APM462: Nonlinear Optimization ([*Jonathan Korman*](https://www.math.toronto.edu/jkorman/))
-- <sup>†</sup>APM306: Mathematics and Law (*Nicholas Derzko*)
+- APM306: Mathematics and Law (*Nicholas Derzko*)
+- APM246: Linear Optimization ([*Jonathan Korman*](https://www.math.toronto.edu/jkorman/))
 - MAT337: Introduction to Real Analysis ([*Tomas Kojar*](https://www.math.toronto.edu/cms/people/students/graduate/kojar-tomas/))
 - MAT237: Multivariable Calculus ([*Regina Rotman*](http://www.math.toronto.edu/rina/))
 - MAT224: Linear Algebra II ([*Sean Uppal*](http://www.math.utoronto.ca/cms/people/faculty/uppal-sean2/))
