@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Calculus of Self-Correction: Why Agentic Loops are Dynamical Systems &#8211; Ziyue Yang</title>
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ziyue Yang&apos;s Personal Website">
+    <meta name="robots" content="all">
+    <meta name="author" content="Ziyue Yang">
+    
+    <meta name="keywords" content="">
+    <link rel="canonical" href="http://localhost:4000/2026/04/11/agentic-loops/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Ziyue Yang" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?202604110330" type="text/css">
+
+    <!-- Fonts -->
+    
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+      <link href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" rel="stylesheet">
+    
+
+    <!-- MathJax -->
+    
+    <script type="text/x-mathjax-config" async>
+    MathJax.Hub.Config({
+      "HTML-CSS": {
+        fonts: ["Latin-Modern"]
+      }
+    });
+    </script>
+    <script type="text/javascript" async
+        src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Calculus of Self-Correction: Why Agentic Loops are Dynamical Systems">
+    <meta property="og:description" content="Ziyue Yang&apos;s Personal Website">
+    <meta property="og:url" content="http://localhost:4000/2026/04/11/agentic-loops/">
+    <meta property="og:site_name" content="Ziyue Yang">
+    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@yangzi33" />
+        <meta name="twitter:creator" content="@yangzi33" />
+    
+    <meta name="twitter:title" content="The Calculus of Self-Correction: Why Agentic Loops are Dynamical Systems" />
+    <meta name="twitter:description" content="Ziyue Yang's Personal Website" />
+    <meta name="twitter:url" content="http://localhost:4000/2026/04/11/agentic-loops/" />
+    
+
+    <!-- Icons -->
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
+
+    <!-- Meta for different platforms -->
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <script type="text/javascript">
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+       ga('create', 'G-XL37T90L10', 'auto');
+       ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body class="site">
+  
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <!-- <a href="http://localhost:4000" class="site-title">Ziyue Yang</a> -->
+      <nav class="site-nav">
+        
+
+
+<a href="http://localhost:4000">About</a>
+<a href="http://localhost:4000#Projects">Projects</a>
+
+
+
+    
+
+    
+        <a href="/coursework/">Coursework</a>
+    
+
+
+
+    
+
+    
+        <a href="/blog/">Blog</a>
+    
+
+
+
+    
+
+    
+        <a href="/miscellaneous/">Misc</a>
+    
+
+
+
+<a class="fa fa-rss" href="/feed.xml" target="_blank"></a>
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>The Calculus of Self-Correction: Why Agentic Loops are Dynamical Systems</h1>
+  <span class="post-meta">Apr 11, 2026</span><br>
+  
+  <span class="post-meta small">
+  
+    3 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>In the research landscape of 2026, we’ve moved past the novelty of “Chain of Thought.” We are now in the era of <strong>Agentic Loops</strong>—systems that don’t just output a string of text, but iterate through a cycle of planning, acting, and reflecting.</p>
+
+<p>But if you look under the hood of most current agents, the “Reflection” step is a bit of a mathematical black box. We’re essentially asking an LLM to grade its own homework. If we want these agents to be reliable in high-stakes environments, we need to stop treating reflection as a prompt and start treating it as a <strong>Control Problem.</strong></p>
+
+<hr />
+
+<h2 id="the-latent-state-of-a-plan">The Latent State of a Plan</h2>
+
+<p>Let’s formalize the “thought process.” When an agent is working on a task, its current plan isn’t just a string; it’s a point $z_t$ in a high-dimensional latent space $\mathcal{Z}$.</p>
+
+<p>Every time the agent observes the environment ($o_t$) and “reflects” on its progress, it applies a <strong>Reflection Operator</strong> $R$. We can model the evolution of the agent’s logic as a discrete-time dynamical system:</p>
+
+\[z_{t+1} = R(z_t, o_t; \theta)\]
+
+<p>The burning question for any ICML-bound researcher is: <strong>Does this sequence ${z_t}$ converge?</strong> Or is the agent just spiraling into a “hallucination sink”?</p>
+
+<hr />
+
+<h2 id="convergence-via-contraction-mappings">Convergence via Contraction Mappings</h2>
+
+<p>If we want an agent to actually finish a task, the operator $R$ needs to behave. Specifically, we want $R$ to be a <strong>Contraction Mapping</strong>.</p>
+
+<p>In metric space terms, if we have two different potential plans $z_a$ and $z_b$, applying the reflection operator should bring them closer together. Holding the current observation $o$ fixed and treating $R(\cdot, o; \theta)$ as a map on $\mathcal{Z}$, we’re looking for a Lipschitz constant $k &lt; 1$ such that:</p>
+
+\[d(R(z_a, o;\theta), R(z_b, o;\theta)) \leq k \cdot d(z_a, z_b)\]
+
+<p>When this condition is met on a complete metric space, the <strong>Banach Fixed-Point Theorem</strong> guarantees that the sequence ${z_t}$ converges to a unique fixed point $z^<em>$—regardless of the initial state. Note that this only guarantees *convergence</em>, not correctness: the fixed point is a stable plan, but whether it’s a <em>good</em> plan depends on whether $R$ was designed to drive the agent toward the actual goal. If $k = 1$ the map is non-expansive and convergence is no longer guaranteed; if $k &gt; 1$ the plans can actively diverge, producing the “overthinking into nonsense” failure mode we see in unoptimized agentic loops.</p>
+
+<hr />
+
+<h2 id="lyapunov-stability-defining-the-goal-energy">Lyapunov Stability: Defining the “Goal Energy”</h2>
+
+<p>How do we prove an agent won’t diverge? We can borrow a page from classical control theory and define a <strong>Lyapunov Function</strong> $V(z)$, which acts as an “energy” or “error” metric.</p>
+
+<p>For a stable agent, $V$ must satisfy two conditions: it must be non-negative and zero only at the goal state ($V(z) \geq 0$, $V(z^*) = 0$), and each step of reflection must decrease it in expectation:</p>
+
+\[\mathbb{E}[V(z_{t+1}) - V(z_t) \mid z_t] &lt; 0\]
+
+<p>This gives us a rigorous way to evaluate “Memory Hygiene.” When an agent “forgets” irrelevant context, it is effectively performing a <strong>Projection Operator</strong> $P$ that maps a messy, high-entropy state back onto a lower-dimensional manifold of “feasible plans.”</p>
+
+<p>By pruning the history, we aren’t just saving tokens; we are forcing the state $z_t$ to stay within a compact region where $V(z)$ is well-behaved.</p>
+
+<hr />
+
+<h2 id="the-shift-from-prompts-to-operators">The Shift: From Prompts to Operators</h2>
+
+<p>The “Prompt Engineering” era was about finding the right words. The “Agentic Theory” era is about finding the right <strong>operators</strong>.</p>
+
+<p>If we can design reflection mechanisms that are mathematically guaranteed to be contractive, we move from “it usually works” to “it is theoretically bound to converge.” This is the bridge between the fluid intuition of Large Language Models and the hard guarantees of optimization theory.</p>
+
+<p>The next time you see an agent “thinking,” don’t just look at the tokens. Look at the trajectory in $\mathcal{Z}$. The math of the loop is where the real intelligence lives.</p>
+
+</article>
+
+
+
+
+  <div class="py2 post-footer">
+  <img src="/data/thonk.png" alt="Ziyue Yang" class="avatar" />
+  <p>
+    If you liked this post, please checkout the rest of my <a href="http://localhost:4000/blog">blog,</a><br>
+    or get it touch with me!
+  </p>
+    
+        <div class="social-icons">
+  <div class="social-icons-left" style="text-align: center;">
+    
+      <a class="fa fa-twitter" href="https://twitter.com/yangzi33" target="_blank"></a>
+    
+    
+      <a class="fa fa-github" href="https://github.com/yangzi33" target="_blank"></a>
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:zyyang215@gmail.com" target="_blank"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/yang-ziyue" target="_blank"></a>
+    
+    <!-- <a class="fa fa-rss" href="/feed.xml" target="_blank"></a> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">GitHub</a>.
+    </small>
+  </div>
+</footer>
+
+
+</body>
+</html>

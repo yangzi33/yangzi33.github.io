@@ -1,0 +1,113 @@
+<h1 id="setting-up-the-problem">Setting Up the Problem</h1>
+
+<p>Our goal is to let the machine to “learn” in some sort of way, but how?</p>
+
+<p>To mathematically formulate a <em>learning problem</em>, there are two essential things for us to define: a <strong>model</strong> and a <strong>loss function</strong>.</p>
+
+<h2 id="the-model">The Model</h2>
+
+<p>The model is an architecture that defines the set of allowable hypotheses, usually functions that predict from the inputs based on computations. Consider the simple case of linear regression, the model consists of linear functions. Usually, the linear function of \(D\) inputs is paramertrized as \(D\) coefficients,</p>
+
+<ul>
+  <li>In the fashion of undergraduate statistics, we often interpret them as slope terms, denoted \(\beta_1,\dots,\beta_D\).</li>
+</ul>
+
+<p>We will call these coefficients using an alternative name: <strong>weights</strong>, usually denoted by $w$’s; we will also have an intercept term, called <strong>bias</strong>. Hence we can write the model mathematically as</p>
+
+\[y = \sum_j w_j x_j+b.\]
+
+<h2 id="loss-function">Loss Function</h2>
+
+<p>It is common to encounter cases where we have multiple linear fits, but how do decide which linear fits are “better” than the others?</p>
+
+<p>In order to quantify how <em>good</em> a fit is, we will define a <strong>loss function</strong> \(\mathcal{L}(y,t)\) which assesses how far the predictions \(y\) is from the target \(t\). In the case of linear regression, we often use the <strong>squared error</strong> defined as</p>
+
+\[\mathcal{L}(y,t)=\frac{1}{2}(y-t)^2,\]
+
+<p>which is small when $y$ and $t$ are close, and large when they are far apart. The value \(y-t\) is known as the <strong>residual</strong>, and we want to minimize which (to be close to zero).</p>
+
+<h2 id="cost-function">Cost Function</h2>
+
+<p>When combining the model and loss function, we obtain an <strong>optimization problem</strong>, in which we try to minimize a <strong>cost function</strong> with respect to the model parameters (i.e. the weights and bias). The cost function is simply the loss averaged over all training examples:</p>
+
+\[\begin{align}
+\mathcal{J}(w_1,w_2,\dots,w_D,b)&amp;=\frac{1}{N}\sum^N_{i=1}\mathcal{L}(y^{(i)},t^{(i)})\\
+&amp;=\frac{1}{2N}\sum^N_{i=1}(y^{(i)}-t^{(i)})^2\\
+&amp;=\frac{1}{2N}\sum^N_{i=1}\Bigg(\sum_j w_jx_j^{(i)}+b-t^{(i)}\Bigg)^2.
+\end{align}\]
+
+<p>Our goal is to choose \(w_1,w_2,\dots,w_D\) and $b$ to minimize $\mathcal{J}$.</p>
+
+<h1 id="the-optimization-problem">The Optimization Problem</h1>
+
+<p>To solve the optimization problem, we will bring in the concept of <strong>partial derivatives</strong> from multivariable calculus.</p>
+
+<p>A good place to start is to compute the partial derivatives of the cost function.
+Consider the case of linear regression, applying the chain rule yields</p>
+
+\[\frac{\partial\mathcal{J}}{\partial w_j}=\frac{1}{N}\sum^N_{i=1}x_j^{(i)}\Bigg(\sum_{j'}w_{j'}x_{j'}^{(i)}+b-t^{(i)}\Bigg)=\frac{1}{N}\sum^N_{i=1}x_j^{(i)}(y^{(i)}-t^{(i)})\]
+
+\[\frac{\partial\mathcal{J}}{\partial b}=\frac{1}{N}\sum^N_{i=1}\Bigg(\sum_{j'}w_{j'}x_{j'}^{(i)}+b-t^{(i)}\Bigg)=\frac{1}{N}\sum^N_{i=1}(y^{(i)}-t^{(i)})\]
+
+<p>To use these partial derivatives, we will have two methods to compute the minimum. That is, <strong>direction solution</strong> and <strong>gradient descent</strong>.</p>
+
+<h2 id="gradient-descent">Gradient Descent</h2>
+
+<p>The gradient descent is an example of an <strong>iterative algorithm</strong>, in which we apply a certain update rule over and over again. If we are <em>lucky enough</em>, our <strong>iterates</strong> will improve gradually according to our objective function.</p>
+
+<p>To start the gradient descent procedure, we will initialze the weights to some value (e.g. all zeros),
+If we visualize the cost function as a surface, the lower is better,
+so we repeatedly adjust them in the direction which <strong>decreases the cost function the most</strong>-the direction of <strong>steepest descent</strong>.
+We will repeat this procedure until the iterates <strong>converge</strong> (in practice, we usually run it until we’re tired of waiting).
+The final iterate will be close to the actual optimum <em>if we are lucky enough</em>.</p>
+
+<p>Now consider the gradient: the direction of steepest ascent of a function</p>
+
+\[\nabla_{\mathbf{w}}\mathcal{J}=\begin{bmatrix}
+\frac{\partial\mathcal{J}}{\partial w_1}\\
+\vdots\\
+\frac{\partial\mathcal{J}}{\partial w_D}
+\end{bmatrix}\]
+
+<p>Our aim is to decrease the function as quickly as possible, hence we should update the parameters in the direction that is <strong>opposite to the gradient</strong>.</p>
+
+<p>We can formalize this using the <strong>gradient descent</strong> update rule:</p>
+
+\[\mathbf{w}\leftarrow\mathbf{w}-\alpha\nabla_{\mathbf{w}}\mathcal{J}.\]
+
+<p>The constant \(\alpha\) here is known as the <strong>learning rate</strong>.</p>
+<ul>
+  <li>The larger it is, the larger a “step” we take.</li>
+  <li>Generally, it’s good to choose small values like \(0.01\) or \(0.001\)</li>
+</ul>
+
+<p>Now a question may arise: why do we need gradient descent if we can set the partial derivatives to zero and compute the “actual” solution? The gradient descent only gives solutions that are close to the optimum, but doesn’t give us the real optimum!</p>
+
+<p>Well, there are two reasons</p>
+
+<ol>
+  <li>Solving the system of equations <strong>explicitly</strong> only applies to a handful of models, but the gradient descent works on all models for which we can compute the gradient (without solving it analytically by setting to \(0\)). This is often easy to do, and it can be easily <em>automated</em>.</li>
+  <li>Solving a large system of linear equations can be expensive, possibly much much much much … more expensive than a single update in the gradient descent. Hence gradient descent can sometimes find a reasonable solution <strong>much faster</strong> than solving the linear systems.</li>
+</ol>
+
+<p>Therefore, gradient descent can often more practical than computing the exact solutions, even for models which we are able to derive.</p>
+
+<h1 id="vectorization">Vectorization</h1>
+
+<p>For sake of getting more compact, readable forms of formulas, we will rewrite the model (linear regression as example again) in terms of operations on matrices and vectors. This process is called <strong>vectorization</strong>.</p>
+
+<p>Suppose we have \(N\) training examples, where each of the examples is \(D\)-dimensional. We will represent the inputs as an \(N\times D\) matrix \(\mathbf{X}\), where each row of \(\mathbf{X}\) corresponds to a training example, and each column corresponds to one input dimention.</p>
+
+<p>The weights are represented as a \(D\)-dimensional vector \(w\), and the targets are represented as a \(N\)-dimensional vector \(\mathbf{t}\).</p>
+
+<p>Therefore the predictions can be computed using a matrix-vector product</p>
+
+\[\mathbf{y}=\mathbf{Xw}+b\mathbf{1}.\]
+
+<p>As well as the cost function:</p>
+
+\[\mathcal{J}=\frac{1}{2N}\|\mathbf{y}-\mathbf{t}\|^2=\frac{1}{2N}\| \mathbf{Xw}+b\mathbf{1}-\mathbf{t} \|^2\]
+
+<p>Additionally, we can vectorize the gradient descent update (for linear regression) as</p>
+
+\[\mathbf{w}\leftarrow\mathbf{w}-\alpha\frac{1}{N}\mathbf{X}^T(\mathbf{y-t}).\]
